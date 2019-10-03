@@ -44,7 +44,11 @@
   <ItemGroup>
     <Compile Include="Conexao.cs" />
     <Compile Include="DeliveryRepositorio.cs" />
+    <Compile Include="FaleConoscoRepositorio.cs" />
+    <Compile Include="LancheRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservaRepositorio.cs" />
+    <Compile Include="UsuarioRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Projeto.Entidades\Projeto.Entidades.csproj">
