@@ -102,6 +102,7 @@
     </Compile>
     <Compile Include="Models\DeliveryCadastroViewModel.cs" />
     <Compile Include="Models\DeliveryConsultaViewModel.cs" />
+    <Compile Include="Models\DeliveryEdicaoViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
