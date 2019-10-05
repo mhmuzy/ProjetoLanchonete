@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lanchonete</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="container">
+
+    <h2><font face="arial" size="3" color="black">Troca de Senha do(a) Usuário(a)</font></h2>
+    @*Titulo da Pagina*@
+    @{
+        /**/
+
+        ViewBag.Title = "TrocarSenha";
+        Layout = "~/Views/Layout/Layout6.cshtml";
+    }
+    @*Layout da Pagina*@
+    <br />
+    @*Pula 1 Linha*@
+    <center><a href="../Usuario/Administrator">Voltar</a></center>
+    @*Link de voltar*@
+    <br />
+    @*Pula 1 linha*@
+    <hr />
+    @model Projeto.Apresentacao.Models.UsuarioTrocarSenhaViewModel
+    @*Model da Pagina*@
+    @using (Html.BeginForm())
+    {
+        @*Formulario da Pagina*@
+        <div class="row">
+            <div class="col-md-4">
+
+                @Html.HiddenFor(model => model.Codigo)
+
+                <label><font face="arial" size="3" color="black">Codigo do(a) Usuario(a):</font></label>
+                @Html.TextBoxFor(model => model.Codigo)
+                @*Campo Codigo do(a) Usuario(a)*@
+                <br />
+                <label><font face="arial" size="3" color="black">Digite a Nova Senha do(a) Usuario(a):</font></label>
+                @Html.PasswordFor(model => model.Senha)
+                @*Campo Senha do(a) Usuario(a)*@
+                <br />
+
+                <input type="submit" class="btn btn-primary" value="Alterar Senha" />
+                @*Botao de alterar senha*@
+                <hr />
+
+                <strong><font face="arial" size="3" color="black">@ViewBag.Message</font></strong>
+                @*Mensagem da Pagina*@
+            </div>
+        </div>
+    }
+</body>
+</html>

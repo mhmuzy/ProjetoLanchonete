@@ -11,19 +11,23 @@ namespace Projeto.DAL
     public class ReservaRepositorio : Conexao 
     {
 
-        public void Insert(Lanche L)
+        public void Insert(Reserva R)
         /// Metodo de Cadastrar Lanche
         {
             OpenConnection();
             /// Abre a Conexao
-            string query = "INSERT INTO LANCHE(NOME, PRECO, STATUS)VALUES(@NOME, @PRECO, 'ABERTO')";
+            string query = "INSERT INTO RESERVA(NOME, E_MAIL, TELEFONE, DESCRICAO, STATUS)VALUES(@NOME, @E_MAIL, @TELEFONE, @DESCRICAO, 'ABERTO')";
             /// Conversa com a Base
             com = new SqlCommand(query, con);
             /// Instancia do SqlCommand
-            com.Parameters.AddWithValue("@NOME", L.Nome);
+            com.Parameters.AddWithValue("@NOME", R.Nome);
             /// Campo Nome do Lanche
-            com.Parameters.AddWithValue("@PRECO", L.Preco);
+            com.Parameters.AddWithValue("@E_MAIL", R.Email);
             /// Campo Preco do Lancje
+            com.Parameters.AddWithValue("@TELEFONE", R.Telefone);
+
+            com.Parameters.AddWithValue("@DESCRICAO", R.Descricao);
+            
             com.ExecuteNonQuery();
             /// Roda a Query
             CloseConnection();

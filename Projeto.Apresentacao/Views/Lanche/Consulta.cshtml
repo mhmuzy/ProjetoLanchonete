@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Consulta";
+    Layout = "~/Views/Layout/Layout6.cshtml";
+}
+@*Layout da Pagina*@
+<h2>Consulta</h2>
+@*Titulo da Pagina*@
+@model List<Projeto.Apresentacao.Models.LancheConsultaViewModel>
+@*Model da Pagina*@
+<div>
+    <strong><font face="arial" size="3">@ViewBag.Message</font></strong>
+</div>
+@*Aviso da Pagina*@
+<table class="table table-bordered table-hover">
+    @*Inicializacao da tabela de resultado*@
+    <thead align="center">
+        <tr bgcolor="gray" align="center">
+            @*Inicializacao do Campo Titulo da Tabela Resultado*@
+            <th><font face="arial" size="3" color="black">Nome</font></th>
+            @*Titulo Nome do Lanche*@
+            <th><font face="arial" size="3" color="black">Preco</font></th>
+            @*Titulo Preco do Lanche*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*Inicializacao da Informacao da Tabela Resultado*@
+                <td><font face="arial" size="3" color="black">@item.Nome</font></td>
+                @*Informacao Nome do Lanche*@
+                <td><font face="arial" size="3" color="black">@item.Preco</font></td>
+                @*Informacao Preco do Lanche*@
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="11" bgcolor="light-gray">
+                <font face="arial" size="3" color="black">Quantidade de Lanches: @Model.Count</font>
+            </td>
+            @*Contador da Pagina*@
+        </tr>
+    </tfoot>
+</table>
+@*Finalizacao da Tabela Resultado*@

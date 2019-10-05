@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lachonete</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body class="container">
+    <br /><br />
+    <strong><font face="arial" size="3">Faca aqui o seu delivery!</font></strong>
+    <br /><br />
+    @{
+        ViewBag.Title = "Lanchonete";
+        Layout = "~/Views/Layout/Layout6.cshtml";
+    }
+    @*Implementacao do Layout*@
+    @model Projeto.Apresentacao.Models.DeliveryCadastroViewModel
+    @*Implementacao da Model*@
+    @using (Html.BeginForm())
+    {
+        @*Inicio do Formulario*@
+        <div class="row">
+            <div class="col-md-4">
+                <label><font face="arial" size="3" color="black">Nome:</font></label>
+                @Html.TextBoxFor(Model => Model.Nome)
+                @*Campo Nome do(a) Usuario(a) que fez o Delivery*@
+                <br /><br />
+                <label><font face="arial" size="3" color="black">Telefone:</font></label>
+                @Html.TextBoxFor(model => model.Telefone)
+                @*Campo Telefone do(a) Usuario que Fez o Delivery*@
+                <br /><br />
+                <label><font face="arial" size="3" color="black">E - mail:</font></label>
+                @Html.TextBoxFor(model => model.Email)
+                @*Campo E - mail do(a) Usuario(a) que fez o Delivery*@
+                <label><font face="arial" size="3" color="black">Descricao:</font></label>
+                @Html.TextAreaFor(model => model.Descricao)
+                @*Campo Descricao do Delivery*@
+                <br /><br />
+
+                <input type="submit" class="btn btn-primary btn-sm" value="Efetuar Reserva" />
+                @*Botao de Efetuar a Reserva*@
+                <hr />
+
+                <strong><font face="arial" size="3" color="black">@ViewBag.Message</font></strong>
+                @*Aviso da Pagina*@
+            </div>
+        </div>
+    }
+</body>
+</html>

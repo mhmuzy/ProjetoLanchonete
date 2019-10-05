@@ -17,19 +17,19 @@ namespace Projeto.Apresentacao.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Cadastro(LancheCadastroViewModel model)
+        public ActionResult Cadastro(ReservaCadastroViewModel model)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    Lanche r = new Lanche();
+                    Reserva r = new Reserva();
                     r.Nome = model.Nome;
-                    r.Preco = model.Preco;
-                    //r.Email = model.Email;
-                    //r.Descricao = model.Descricao;
+                    r.Telefone = model.Telefone;
+                    r.Email = model.Email;
+                    r.Descricao = model.Descricao;
 
-                    LancheRepositorio rep = new LancheRepositorio();
+                    ReservaRepositorio rep = new ReservaRepositorio();
                     rep.Insert(r);
 
                     ViewBag.Message = "Aguarde, iremos fazer a sua reserva!";

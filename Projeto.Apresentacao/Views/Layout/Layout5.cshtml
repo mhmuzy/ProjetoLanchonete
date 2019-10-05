@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Localização", "Localizacao", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Lanche", "Consulta", "Lanche", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Delivery", "Delivery", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Reservas", "Cadastro", "Reserva", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Contato", "Cadastro", "FaleConosco", new { area = "" }, new { @class = "navbar-brand" })
+                <a href="~/Forms/Portal.aspx" class="navbar-brand">Area Restrita</a>
+                @*Links do Layout*@
+            </div>
+            <br />
+            <table border align="right" bgcolor="black">
+                <tr bgcolor="white">
+                    <td><font face="arial" size="3">@DateTime.Now.DayOfWeek - @DateTime.Now.Day / @DateTime.Now.Month / @DateTime.Now.Year  @DateTime.Now.Hour : @DateTime.Now.Minute Hrs</font></td>
+                </tr>
+            </table>
+            @*Relogio da Pagina*@
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        @*Renderizacao*@
+        <br />
+        @*Pula mais 1 linha*@
+        <center><img src="~/Imagens/sim-retrô-2.jpg" width="850px" height="280px" /></center>
+        @*Imagem da Pagina*@
+        <br /><br />
+        @*Pula 2 linhas*@
+        <form action="../Forms/res_fale.aspx" method="post" />
+        @*Formulario*@
+        <table class="table table-bordered table-hover" bgcolor="black">
+            @*Tabela*@
+            <thead>
+                <tr bgcolor="gray">
+                    <td>Nome:</td>
+                    <td bgcolor="white">
+                        <input type="text" name="Nome" value="" class="form-control" />
+                    </td>
+                </tr>
+                @*Campo Nome*@
+                <tr bgcolor="gray">
+                    <td>
+                        E - mail:
+                    </td>
+                    <td bgcolor="white">
+                        <input type="text" name="E_mail" value="" class="form-control" />
+                    </td>
+                </tr>
+                @*Campo E - mail*@
+                <tr bgcolor="gray">
+                    <td>
+                        Telefone:
+                    </td>
+                    <td bgcolor="white">
+                        <input type="text" name="Telefone" value="" class="form-control" />
+                    </td>
+                </tr>
+                @* Campo Telefone*@
+                <tr bgcolor="gray">
+                    <td>
+                        Descricao do Fale Conosco:
+                    </td>
+                    <td bgcolor="white">
+                        <textarea name="Descricao" width="30000px" class="form-control"></textarea>
+                    </td>
+                </tr>
+                @*Campo Descricao*@
+                <tr align="center" bgcolor="blue">
+                    <td colspan="2">
+                        <input type="submit" class="btn btn-danger" data-toggle="collapse" data-target=".navbar-collapse" value="Enviar" />
+                    </td>
+                </tr>
+                @*Botao de Evento*@
+        </table>
+        <br />
+        <center>
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Lanchonete</p>
+            </footer>
+        </center>
+        @*Ano de Atuacao da Pagina*@
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

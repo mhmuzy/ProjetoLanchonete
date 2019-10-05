@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+ %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete</title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/bootstrapMhmuzy.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <br />
+            <a href="../Forms/Portal.aspx"><font color="white">Sair</font></a>
+            <table border align="right" bgcolor="black">
+                <tr bgcolor="white">
+                    <td><font face="arial" size="3">@DateTime.Now.DayOfWeek - @DateTime.Now.Day / @DateTime.Now.Month / @DateTime.Now.Year @DateTime.Now.Hour : @DateTime.Now.Minute Hrs</font></td>
+                </tr>
+            </table>
+            @*Relogio da Pagina*@
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav"></ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container body-content">
+
+        <br />
+        <ul class="menu clearfix">
+            <li>
+                <a href="#">Usuario(a)</a>
+                @*Menu Usuario(a)*@
+
+                <ul class="sub-menu clearfix">
+
+
+                    <li><a href="../Usuario/Cadastro">Cadastrar Usuario(a)</a></li>
+                    @*Item de Cadastro de Usuario(a)*@
+                    <li><a href="../Forms/ListUsuarioTrocarSenha.aspx">Alterar a Senha do(a) Usuario(a)</a></li>
+                    @*Alterar senha do(a) Usuario(a)*@
+                    <li><a href="../Forms/ListUsuarioExcluir.aspx">Excluir o(a) Usuario(a)</a></li>
+                    @*Excluir Usuario(a)*@
+                    <li><a href="../Usuario/ConsultaAlterarSenha">Consultar o(a) Usuario(a)</a></li>
+                    @*Consultar Usuario(a)*@
+
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="#">Lanche(s)</a>
+                @*Menu Lanche*@
+                <ul class="sub-menu clearfix">
+
+
+                    <li><a href="../Lanche/Cadastro">Cadastrar Lanche(s)</a></li>
+                    @*Cadastro de Lanche*@
+                    <li><a href="../Forms/ListLancheEdit.aspx">Alterar dado(s) do(s) Lanche(s)</a></li>
+                    @*Alteracao dos dados do Lanche*@
+                    <li><a href="../Forms/ListLancheExc.aspx">Excluir o(s) Lanche(s)</a></li>
+                    @*Exclusao do Lanche*@
+                    <li><a href="../Lanche/ConsultaAdministrador">Consultar o(s) Lanche(s)</a></li>
+                    @*Consulta de Lanches*@
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Delivery</a>
+                @*Menu de Delivery*@
+                <ul class="sub-menu clearfix">
+                    <li><a href="../Forms/ExcDelivery.aspx">Excluir ou Consultar Delivery</a></li>
+                    @*Exclusao ou Consulta de Delivery*@
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Fale Conosco</a>
+                @*Menu do Fale Conosco*@
+                <ul class="sub-menu clearfix">
+                    <li><a href="../Forms/ExcFaleConosco.aspx">Excluir ou Consultar o Fale Conosco</a></li>
+                    @*Exclusao ou Consulta do Fale Conosco*@
+                </ul>
+
+            </li>
+
+
+        </ul>
+
+
+
+        <hr />
+        <strong>Seja Bem Vindo a Aplicacao da Lanchonete!</strong>
+        @*Titulo da Pagina*@
+        <br />
+        <br />
+        @*Pula 2 linhas*@
+        Administrador
+        @*Nome do Tipo do(a) Usuario(a)*@
+        <br />
+        <br />
+        <!--    <table class="table table-bordered table-hover" bgcolor="black">
+                    <thead>
+                        <tr bgcolor="gray" align="center">
+                            <td>Usuario(a)</td>
+                            <td>
+                                Lanche(s)
+                            </td>
+                            <td>Delivery</td>
+                            <td>
+                                Fale Conosco
+                            </td>
+                            <td>
+                                Reserva
+                            </td>
+                        </tr>
+                        <tr bgcolor="White" align="center">
+                            <td>
+                                <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Cadastrar Usuario(a)</a><br /><br />
+                                <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Alterar Senha do(a) Usuario(a)</a><br /><br />
+                                <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Excluir o(a) Usuario(a)</a><br /><br />
+                                <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Consultar o(a) Usuario(a)</a><br /><br />
+                            </td>
+                            <td>
+                                <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Cadastrar Lanche(s)</a><br /><br />
+                                <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Alterar Dado(s) do(s) Lanche(s)</a><br /><br />
+                                <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Excluir o(s) Lanche(s)</a><br /><br />
+                                <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Consultar o(s) Lanche(s)</a><br /><br />
+                            </td>
+                            <td>
+                                <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Excluir ou Consultar o Delivery</a><br /><br />
+                            </td>
+                            <td>
+                                <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Excluir ou Consultar o Fale Conosco</a><br /><br />
+                            </td>
+                            <td>
+                                <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Excluir ou Consultar a Reserva</a><br /><br />
+                            </td>
+                        </tr>
+        </table>-->
+        <center><img src="../Imagens/sim-retrô-2.jpg" width="850px" height="280px" /></center>
+        @*Imagem da Pagina*@
+        <br />
+        @*Pula mais 1 linha*@
+    </div>
+    <center>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Lanchonete</p>
+        </footer>
+    </center>
+    @*Relogio da Pagina*@
+</body>
+</html>

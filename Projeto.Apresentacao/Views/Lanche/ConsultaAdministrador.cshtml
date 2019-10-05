@@ -1,0 +1,52 @@
+﻿<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lanchonete</title>
+<link href="../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="../Content/bootstrapMhmuzy.css" rel="stylesheet" type="text/css" />
+<script src="../Scripts/modernizr-2.6.2.js"></script>
+
+<h2>Consulta</h2>
+<br />
+<center><a href="../Usuario/Administrator">Voltar</a></center>
+<br />
+@*Titulo da Pagina*@
+@model List<Projeto.Apresentacao.Models.LancheConsultaViewModel>
+@*Model da Pagina*@
+<div>
+    <strong><font face="arial" size="3">@ViewBag.Message</font></strong>
+</div>
+@*Aviso da Pagina*@
+<table class="table table-bordered table-hover">
+    @*Inicializacao da tabela de resultado*@
+    <thead align="center">
+        <tr bgcolor="gray" align="center">
+            @*Inicializacao do Campo Titulo da Tabela Resultado*@
+            <th><font face="arial" size="3" color="black">Nome</font></th>
+            @*Titulo Nome do Lanche*@
+            <th><font face="arial" size="3" color="black">Preco</font></th>
+            @*Titulo Preco do Lanche*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*Inicializacao da Informacao da Tabela Resultado*@
+                <td><font face="arial" size="3" color="black">@item.Nome</font></td>
+                @*Informacao Nome do Lanche*@
+                <td><font face="arial" size="3" color="black">@item.Preco</font></td>
+                @*Informacao Preco do Lanche*@
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="11" bgcolor="light-gray">
+                <font face="arial" size="3" color="black">Quantidade de Lanches: @Model.Count</font>
+            </td>
+            @*Contador da Pagina*@
+        </tr>
+    </tfoot>
+</table>
+@*Finalizacao da Tabela Resultado*@

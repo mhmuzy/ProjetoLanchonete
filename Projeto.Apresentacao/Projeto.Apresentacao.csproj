@@ -92,7 +92,34 @@
     <Content Include="App_Data\Banco_log.ldf">
       <DependentUpon>Banco.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrapMhmuzy.css" />
+    <Content Include="Content\estilos.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Forms\HomePage.aspx" />
+    <Content Include="Forms\ListLancheEdit.aspx" />
+    <Content Include="Forms\ListLancheExc.aspx" />
+    <Content Include="Forms\ListUsuarioExcluir.aspx" />
+    <Content Include="Forms\ListUsuarioTrocarSenha.aspx" />
+    <Content Include="Forms\Portal.aspx" />
+    <Content Include="Forms\res_contato.aspx" />
+    <Content Include="Forms\res_fale.aspx" />
+    <Content Include="Forms\res_reserva.aspx" />
+    <Content Include="Forms\trocarSenha.aspx" />
+    <Content Include="Forms\update.aspx" />
+    <Content Include="Forms\UpdateLanche.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Imagens\montar-uma-lanchonete-é-um-bom-negócio.jpg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +130,91 @@
     <Compile Include="Controllers\LancheController.cs" />
     <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\ReservaController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Forms\HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListLancheEdit.aspx.cs">
+      <DependentUpon>ListLancheEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ListLancheEdit.aspx.designer.cs">
+      <DependentUpon>ListLancheEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListLancheExc.aspx.cs">
+      <DependentUpon>ListLancheExc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ListLancheExc.aspx.designer.cs">
+      <DependentUpon>ListLancheExc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListUsuarioExcluir.aspx.cs">
+      <DependentUpon>ListUsuarioExcluir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ListUsuarioExcluir.aspx.designer.cs">
+      <DependentUpon>ListUsuarioExcluir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListUsuarioTrocarSenha.aspx.cs">
+      <DependentUpon>ListUsuarioTrocarSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ListUsuarioTrocarSenha.aspx.designer.cs">
+      <DependentUpon>ListUsuarioTrocarSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Portal.aspx.cs">
+      <DependentUpon>Portal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Portal.aspx.designer.cs">
+      <DependentUpon>Portal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\res_contato.aspx.cs">
+      <DependentUpon>res_contato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\res_contato.aspx.designer.cs">
+      <DependentUpon>res_contato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\res_fale.aspx.cs">
+      <DependentUpon>res_fale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\res_fale.aspx.designer.cs">
+      <DependentUpon>res_fale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\res_reserva.aspx.cs">
+      <DependentUpon>res_reserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\res_reserva.aspx.designer.cs">
+      <DependentUpon>res_reserva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\trocarSenha.aspx.cs">
+      <DependentUpon>trocarSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\trocarSenha.aspx.designer.cs">
+      <DependentUpon>trocarSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\update.aspx.cs">
+      <DependentUpon>update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\update.aspx.designer.cs">
+      <DependentUpon>update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UpdateLanche.aspx.cs">
+      <DependentUpon>UpdateLanche.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateLanche.aspx.designer.cs">
+      <DependentUpon>UpdateLanche.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -131,7 +243,48 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Usuario\Cadastro.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Usuario\CadastroSecretaria.cshtml" />
+    <Content Include="Views\Usuario\ConsultaAlterarSenha.cshtml" />
+    <Content Include="Views\Usuario\ConsultaUsuario.cshtml" />
+    <Content Include="Views\Usuario\Consulta.cshtml" />
+    <Content Include="Views\Usuario\ConsultaMotoboy.cshtml" />
+    <Content Include="Views\Usuario\TrocarSenha.cshtml" />
+    <Content Include="Views\Usuario\Administrator.cshtml" />
+    <Content Include="Views\Usuario\Secretaria.cshtml" />
+    <Content Include="Views\Usuario\Motoboy.cshtml" />
+    <Content Include="Views\Delivery\Cadastro.cshtml" />
+    <Content Include="Views\Delivery\Consulta.cshtml" />
+    <Content Include="Views\Delivery\ConsultaMotoboy.cshtml" />
+    <Content Include="Views\Delivery\ConsultaSecretaria.cshtml" />
+    <Content Include="Views\FaleConosco\Cadastro.cshtml" />
+    <Content Include="Views\FaleConosco\Consulta.cshtml" />
+    <Content Include="Views\FaleConosco\ConsultaMotoboy.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Localizacao.cshtml" />
+    <Content Include="Views\Home\Delivery.cshtml" />
+    <Content Include="Views\Home\Reservas.cshtml" />
+    <Content Include="Views\Home\Contato.cshtml" />
+    <Content Include="Views\Lanche\Cadastro.cshtml" />
+    <Content Include="Views\Lanche\CadastroSecretaria.cshtml" />
+    <Content Include="Views\Lanche\ConsultaAdministrador.cshtml" />
+    <Content Include="Views\Lanche\ConsultaMotoboy.cshtml" />
+    <Content Include="Views\Lanche\ConsultaSecretaria.cshtml" />
+    <Content Include="Views\Lanche\Consulta.cshtml" />
+    <Content Include="Views\Layout\Layout.cshtml" />
+    <Content Include="Views\Layout\Layout2.cshtml" />
+    <Content Include="Views\Layout\Layout3.cshtml" />
+    <Content Include="Views\Layout\Layout4.cshtml" />
+    <Content Include="Views\Layout\Layout5.cshtml" />
+    <Content Include="Views\Layout\Layout6.cshtml" />
+    <Content Include="Views\Reserva\Cadastro.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -139,14 +292,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Delivery\" />
-    <Folder Include="Views\FaleConosco\" />
-    <Folder Include="Views\Home\" />
-    <Folder Include="Views\Lanche\" />
-    <Folder Include="Views\Layout\" />
-    <Folder Include="Views\Reserva\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Projeto.DAL\Projeto.DAL.csproj">
       <Project>{96c12171-d489-445c-99cb-2d4edac01261}</Project>

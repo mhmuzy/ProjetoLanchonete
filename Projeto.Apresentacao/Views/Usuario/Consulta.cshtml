@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lanchonete</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="container">
+    <br /><br />
+
+
+    @*Layout da Pagina*@
+    <strong><font face="arial" size="3">Consulta de Usuarios!</font></strong>
+    @*Titulo da Pagina*@
+    <br />
+    @*Pula mais 1 linha*@
+    <center><a href="../Usuario/Secretaria"><font face="arial" size="3" color="black">Voltar</font></a></center>
+    @*Link de voltar*@
+    <hr />
+
+    @model List<Projeto.Apresentacao.Models.UsuarioConsultaViewModel>
+    @*Model da Pagina*@
+    <div>
+        <strong><font face="arial" size="3" color="black">@ViewBag.Message</font></strong>
+        @*Mensagem da Pagina*@
+    </div>
+
+    <table class="table table-bordered table-hover">
+        @*Inicializacao da Tabela de REsultado*@
+        <thead align="center">
+            <tr bgcolor="gray" align="center">
+                @*Inicio do Titulo da Pagina*@
+                <th><font face="arial" size="3" color="black">Login</font></th>
+                @*Campo Login do(a) Usuario(a)*@
+                <th><font face="arial" size="3" color="black">Senha</font></th>
+                @*Campo Senha do(a) Usuario(a)*@
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @*Item de Informacao da Pagina*@
+                    <td><font face="arial" size="3" color="black">@item.Nome</font></td>
+                    @*Informacao Login do(a) Usuario(a)*@
+                    <td><font face="arial" size="3" color="black">****</font></td>
+                    @*Informacao Senha do(a) Usuario(a)*@
+
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="11" bgcolor="light-gray">
+                    <font face="arial" size="3" color="black">Quantidade de Usuários: @Model.Count</font>
+                </td>
+            </tr>
+            @*Quantidade de Usuarios*@
+        </tfoot>
+    </table>
+</body>
+</html>

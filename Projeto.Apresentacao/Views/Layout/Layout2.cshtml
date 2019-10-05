@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Localização", "Localizacao", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Lanche", "Consulta", "Lanche", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Delivery", "Delivery", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Reservas", "Cadastro", "Reserva", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Contato", "Cadastro", "FaleConosco", new { area = "" }, new { @class = "navbar-brand" })
+                <a href="~/Forms/Portal.aspx" class="navbar-brand">Area Restrita</a>
+                @*Links do Layout*@
+            </div>
+            <br />
+            <table border align="right" bgcolor="black">
+                <tr bgcolor="white">
+                    <td><font face="arial" size="3">@DateTime.Now.DayOfWeek - @DateTime.Now.Day / @DateTime.Now.Month / @DateTime.Now.Year  @DateTime.Now.Hour : @DateTime.Now.Minute Hrs</font></td>
+                </tr>
+            </table>
+            @*Relogio da Pagina*@
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        @*Renderizacao*@
+        <br />
+        @*Pula mais 1 linha*@
+        <center><img src="~/Imagens/montar-uma-lanchonete-é-um-bom-negócio.jpg" width="850px" height="280px" /></center>
+        @*Imagem da Pagina*@
+        <br /><br />
+        @*Pula 2 linhas*@
+        <table class="table table-bordered table-hover" align="center">
+            @*Inicializacao da Tabela de REsultado*@
+            <thead align="center">
+                <tr bgcolor="gray" align="center">
+                    @*Inicializacao da Parte de Titulo da Tabela de Resultado*@
+                    <th><font face="arial" size="3" color="black">Nome</font></th>
+                    @*Titulo Nome*@
+                    <th><font face="arial" size="3" color="black">Endereço</font></th>
+                    @*Titulo Endereco*@
+                    <th><font face="arial" size="3" color="black">Data de Entrega</font></th>
+                    @*Titulo Data da Entrega*@
+                    <th><font face="arial" size="3" color="black">Telefone</font></th>
+                    @*Titulo Telefone*@
+                    <th><font face="arial" size="3" color="black">Atuação</font></th>
+                    @*Titulo Atuacao*@
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><font face="arial" size="3" color="black">JARDINS</font></td>
+                    <!Dado Matricula do(a) Funcionario(a) da COTI>
+                    <td><font face="arial" size="3" color="black">Al. X, Y - Z</font></td>
+                    <!Dado Nome do(a) Funcionario(a) da COTI>
+                    <td>
+                        <font face="arial" size="3" color="black">
+                            Domingo a Quinta, das 12h à 01h<br />
+                            Sexta e Sábado, das 12h às 03h
+                        </font>
+                    </td>
+                    <!Dado Cargo do(a) Funcionario(a) da COTI>
+                    <td><font face="arial" size="3" color="black">(00) 0000 - 0000</font></td>
+
+                    <td>
+                        <a href="~/Home/Delivery" class="btn btn-primary btn-sm">
+                            <font face="arial" size="3" color="black">Delivery</font>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><font face="arial" size="3" color="black">CIDADE JARDINS</font></td>
+                    <!Dado Matricula do(a) Funcionario(a) da COTI>
+                    <td><font face="arial" size="3" color="black">Al. X, Y - Z</font></td>
+                    <!Dado Nome do(a) Funcionario(a) da COTI>
+                    <td>
+                        <font face="arial" size="3" color="black">
+                            Domingo a Quinta, das 12h à 01h<br />
+                            Sexta e Sábado, das 12h às 03h
+                        </font>
+                    </td>
+                    <!Dado Cargo do(a) Funcionario(a) da COTI>
+                    <td><font face="arial" size="3" color="black">(00) 0000 - 0000</font></td>
+
+                    <td>
+                        <a href="~/Home/Delivery" class="btn btn-primary btn-sm">
+                            <font face="arial" size="3" color="black">Delivery</font>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><font face="arial" size="3" color="black">MOEMA</font></td>
+                    <!Dado Matricula do(a) Funcionario(a) da COTI>
+                    <td><font face="arial" size="3" color="black">Al. X, Y - Z</font></td>
+                    <!Dado Nome do(a) Funcionario(a) da COTI>
+                    <td>
+                        <font face="arial" size="3" color="black">
+                            Domingo a Quinta, das 12h à 01h<br />
+                            Sexta e Sábado, das 12h às 03h
+                        </font>
+                    </td>
+                    <!Dado Cargo do(a) Funcionario(a) da COTI>
+                    <td><font face="arial" size="3" color="black">(00) 0000 - 0000</font></td>
+
+                    <td>
+                        <a href="~/Home/Delivery" class="btn btn-primary btn-sm">
+                            <font face="arial" size="3" color="black">Delivery</font>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><font face="arial" size="3" color="black">HIGIENOPOLIS</font></td>
+                    <!Dado Matricula do(a) Funcionario(a) da COTI>
+                    <td><font face="arial" size="3" color="black">Al. X, Y - Z</font></td>
+                    <!Dado Nome do(a) Funcionario(a) da COTI>
+                    <td>
+                        <font face="arial" size="3" color="black">
+                            Domingo a Quinta, das 12h à 01h<br />
+                            Sexta e Sábado, das 12h às 03h
+                        </font>
+                    </td>
+                    <!Dado Cargo do(a) Funcionario(a) da COTI>
+                    <td><font face="arial" size="3" color="black">(00) 0000 - 0000</font></td>
+
+                    <td>
+                        <a href="~/Home/Delivery" class="btn btn-primary btn-sm">
+                            <font face="arial" size="3" color="black">Delivery</font>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><font face="arial" size="3" color="black">PINHEIROS</font></td>
+                    <!Dado Matricula do(a) Funcionario(a) da COTI>
+                    <td><font face="arial" size="3" color="black">Al. X, Y - Z</font></td>
+                    <!Dado Nome do(a) Funcionario(a) da COTI>
+                    <td>
+                        <font face="arial" size="3" color="black">
+                            Domingo a Quinta, das 12h à 01h<br />
+                            Sexta e Sábado, das 12h às 03h
+                        </font>
+                    </td>
+                    <!Dado Cargo do(a) Funcionario(a) da COTI>
+                    <td><font face="arial" size="3" color="black">(00) 0000 - 0000</font></td>
+
+                    <td>
+                        <a href="~/Home/Delivery" class="btn btn-primary btn-sm">
+                            <font face="arial" size="3" color="black">Delivery</font>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br />
+        <center>
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Lanchonete</p>
+            </footer>
+        </center>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

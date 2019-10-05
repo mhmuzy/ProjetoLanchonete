@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lanchonete</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body class="container">
+    <br /><br />
+    @*Pula 2 linhas Para o Titulo da Pagina nao ficar muito em cima*@
+    <strong><font face="arial" size="3">Faca aqui a sua reserva!</font></strong>
+    @*Titulo da Pagina*@
+    <br />
+    <br />
+    @*Pula 2 linhas*@
+    @{
+        ViewBag.Title = "Lanchonete";
+        Layout = "~/Views/Layout/Layout6.cshtml";
+    }
+    @*Layout da Pagina*@
+    @model Projeto.Apresentacao.Models.ReservaCadastroViewModel
+    @*Model da Pagina*@
+    @using (Html.BeginForm())
+    {
+        @*Formulario no MVC*@
+        <div class="row">
+            <div class="col-md-4">
+                <label><font face="arial" size="3" color="black">Nome:</font></label>
+                @Html.TextBoxFor(Model => Model.Nome)
+                @*Campo Nome do(a) Usuario(a) que vai fazer a reserva*@
+                <br /><br />
+                <label><font face="arial" size="3" color="black">Telefone:</font></label>
+                @Html.TextBoxFor(model => model.Telefone)
+                @*Campo Telefone do(a) Usuario(a) que vai fazer a Reserva*@
+                <br /><br />
+                <label><font face="arial" size="3" color="black">E - mail:</font></label>
+                @Html.TextBoxFor(model => model.Email)
+                @*Campo E - mail do(a) Usuario(a) que vai fazer a Reserva*@
+                <label><font face="arial" size="3" color="black">Descricao:</font></label>
+                @Html.TextAreaFor(model => model.Descricao)
+                @*Campo Descricao da Reserva*@
+                <br /><br />
+
+                <input type="submit" class="btn btn-primary btn-sm" value="Efetuar Reserva" />
+                @*Botao de Efetuar a Reserva*@
+                <hr />
+
+                <strong><font face="arial" size="3" color="black">@ViewBag.Message</font></strong>
+                @*Mensagem da Pagina*@
+            </div>
+        </div>
+    }
+</body>
+</html>

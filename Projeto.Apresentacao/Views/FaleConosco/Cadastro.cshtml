@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lanchonete</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body class="container">
+    <br /><br />
+    <strong><font face="arial" size="3">Faca aqui o seu Fale Conosco!</font></strong>
+    <br /><br />
+    @{
+        ViewBag.Title = "Lanchonete";
+        Layout = "~/Views/Layout/Layout6.cshtml";
+    }
+    @*Layout da Pagina*@
+    @model Projeto.Apresentacao.Models.FaleConoscoCadastroViewModel
+    @*Model da Pagina*@
+    @using (Html.BeginForm())
+    {
+        @*Inicializacao do Formulario*@
+        <div class="row">
+            <div class="col-md-4">
+                <label><font face="arial" size="3">Nome:</font></label>
+                @Html.TextBoxFor(model => model.Nome)
+                @*Campo Nome do(a) Usuario(a) que vai fazer o Fale Conosco*@
+                <br /><br />
+                <label><font face="arial" size="3">Telefone:</font></label>
+                @Html.TextBoxFor(model => model.Telefone)
+                @*Campo Teleofne do(a) Usuario(a) que vai fazer o Fale Conosco*@
+                <br /><br />
+                <label><font face="arial" size="3">E - mail:</font></label>
+                @Html.TextBoxFor(model => model.Email)
+                @*Campo E - mail do(a) Usuario(a) que vai fazer o Fale Conosco*@
+                <br /><br />
+                <label><font face="arial" size="3">Descricao:</font></label>
+                @Html.TextAreaFor(model => model.Descricao)
+                @*Campo Descricao do Fale Conosco*@
+                <br /><br />
+                <input type="submit" class="btn btn-primary btn-sm" value="Efetuar o Fale Conosco" />
+                @*Botao de Efetuar o Fale Conosco*@
+                <hr />
+
+                <strong><font face="arial" size="3" color="black">@ViewBag.Message</font></strong>
+                @*Mensagem de Aviso*@
+            </div>
+        </div>
+    }

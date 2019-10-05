@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lanchonete</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body class="container">
+
+    <strong><font face="arial" size="3">Cadastro de Lanches!</font></strong>
+    @*Titulo da Pagina*@
+    <center><a href="../Usuario/Administrator">Voltar</a></center>
+    <br /><br />
+    @*Pula 2 linhas*@
+
+    @*Layout da Pagina*@
+    @model Projeto.Apresentacao.Models.LancheCadastroViewModel
+    @*Model da Pagina*@
+    @using (Html.BeginForm())
+    {
+        @*Formulario*@
+        <div class="row">
+            <div class="col-md-4">
+                <label><font face="arial" size="3">Nome do Lanche:</font></label>
+                @Html.TextBoxFor(model => model.Nome)
+                @*Campo Nome do Lanche*@
+                <br /><br />
+                <label><font face="arial" size="3">Preco:</font></label>
+                @Html.TextBoxFor(model => model.Preco)
+                @*Campo Preco do Lanche*@
+                <br /><br />
+                <input type="submit" class="btn btn-primary btn-sm" value="Cadastrar o Lanche" />
+                @*Botao de Cadastro do Lanche*@
+                <hr />
+
+                <strong><font face="arial" size="3" color="black">@ViewBag.Message</font></strong>
+                @*Aviso da Pagina*@
+            </div>
+        </div>
+    }
