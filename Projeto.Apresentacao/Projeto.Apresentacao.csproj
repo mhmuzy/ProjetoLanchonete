@@ -97,12 +97,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DeliveryController.cs" />
+    <Compile Include="Controllers\FaleConoscoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LancheController.cs" />
+    <Compile Include="Controllers\LayoutController.cs" />
+    <Compile Include="Controllers\ReservaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DeliveryCadastroViewModel.cs" />
     <Compile Include="Models\DeliveryConsultaViewModel.cs" />
     <Compile Include="Models\DeliveryEdicaoViewModel.cs" />
+    <Compile Include="Models\DeliveryExcluirViewModel.cs" />
+    <Compile Include="Models\FaleConoscoCadastroViewModel.cs" />
+    <Compile Include="Models\FaleConoscoConsultaViewModel.cs" />
+    <Compile Include="Models\FaleConoscoEdicaoViewModel.cs" />
+    <Compile Include="Models\FaleConoscoExcluirViewModel.cs" />
+    <Compile Include="Models\LancheCadastroViewModel.cs" />
+    <Compile Include="Models\LancheConsultaViewModel.cs" />
+    <Compile Include="Models\LancheEdicaoViewModel.cs" />
+    <Compile Include="Models\LancheExcluirViewModel.cs" />
+    <Compile Include="Models\ReservaCadastroViewModel.cs" />
+    <Compile Include="Models\ReservaConsultaViewModel.cs" />
+    <Compile Include="Models\ReservaEdicaoViewModel.cs" />
+    <Compile Include="Models\ReservaExcluirViewModel.cs" />
+    <Compile Include="Models\UsuarioCadastroViewModel.cs" />
+    <Compile Include="Models\UsuarioConsultaViewModel.cs" />
+    <Compile Include="Models\UsuarioEdicaoViewModel.cs" />
+    <Compile Include="Models\UsuarioExcluirViewModel.cs" />
+    <Compile Include="Models\UsuarioTrocarSenhaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -116,7 +140,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Folder Include="Views\Delivery\" />
+    <Folder Include="Views\FaleConosco\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Lanche\" />
+    <Folder Include="Views\Layout\" />
+    <Folder Include="Views\Reserva\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Projeto.DAL\Projeto.DAL.csproj">
+      <Project>{96c12171-d489-445c-99cb-2d4edac01261}</Project>
+      <Name>Projeto.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Projeto.Entidades\Projeto.Entidades.csproj">
+      <Project>{35c4862a-8815-40de-89a0-994e80685d20}</Project>
+      <Name>Projeto.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
