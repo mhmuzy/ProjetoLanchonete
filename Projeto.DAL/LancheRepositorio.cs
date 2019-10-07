@@ -16,7 +16,7 @@ namespace Projeto.DAL
         {
             OpenConnection();
             /// Abre a Conexao
-            string query = "INSERT INTO LANCHE(NOME, PRECO, STATUS)VALUES(@NOME, @PRECO, 'ABERTO')";
+            string query = "INSERT INTO LANCHE(NOME, PRECO, STATUS)VALUES(@NOME, '10.00', 'ABERTO')";
             /// Conversa com a Base
             com = new SqlCommand(query, con);
             /// Instancia do SqlCommand

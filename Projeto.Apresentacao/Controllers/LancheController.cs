@@ -25,7 +25,7 @@ namespace Projeto.Apresentacao.Controllers
                 {
                     Lanche l = new Lanche();
 
-                    l.CodigoTipoLanche = model.CodigoTipoLanche;
+                    //l.CodigoTipoLanche = model.CodigoTipoLanche;
                     l.Nome = model.Nome;
                     l.Preco = model.Preco;
 

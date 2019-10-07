@@ -1,0 +1,130 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ExcFaleConosco.aspx.cs" Inherits="Projeto.Apresentacao.Forms.ExcFaleConosco" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete</title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/bootstrapMhmuzy.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body class="container">
+    <div>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <table border align="right" bgcolor="black">
+                <tr bgcolor="white">
+                    <td><font face="arial" size="3"><%= DateTime.Now.DayOfWeek %> - <%= DateTime.Now.Day %> / <%=DateTime.Now.Month %> / <%= DateTime.Now.Year %> <%=DateTime.Now.Hour %> : <%=DateTime.Now.Minute %> Hrs</font></td>
+                </tr>
+            </table>
+            </div>
+                <% /// Menu da Pagina %>
+            <br />
+            
+            
+            <% /// Pula 1 Linha %>
+            
+
+        </div>
+
+    </div>
+    <h2><font face="arial" size="3" color="black">Lista de Deliverys Para a Exclusao:</font></h2>
+        <% /// Titulo da Pagina %>
+    <form id="form1" runat="server">
+        <div>
+            <%@Import Namespace="System.Data"  %>
+                <%@Import Namespace="System.Data.SqlClient"  %>
+                <%@Import Namespace="System.Configuration"  %>    
+                <%@Import Namespace="Projeto.Entidades"  %>    
+                    <% /// Conexao com a base de dados %>
+            <br />
+                <% /// Pula mais 1 linha %>
+    <center><a href="../Usuario/Administrator">Voltar</a></center>
+                <% /// Link de voltar %>
+    <br />
+            <% /// Pula mais 1 linha %>
+    <hr />
+            <% /// Divisoria do canto superior da pagina %>
+            <% 
+                SqlConnection  con = new SqlConnection(ConfigurationManager.ConnectionStrings["COTI"].ConnectionString);
+                con.Open();
+                /// Abre  aconexao
+                SqlCommand com = new SqlCommand("SELECT * FROM FALE_CONOSCO WHERE STATUS = 'ABERTO'", con);
+                /// Conversa com a base
+                SqlDataReader dr = com.ExecuteReader(); 
+                /// Comando de Leitura dos dados
+                %>
+                <table class="table table-bordered table-hover">
+        <% /// Inicializacao da Tabela de Resultados %>
+        <thead align="center">
+            <tr bgcolor="gray" align="center">
+                    <% /// Inicio do Titulo da Pagina %>
+                <th><font face="arial" size="3" color="black">Nome do(a) Usuario(a) que fez o Fale Conosco</font></th>
+                <% /// Titulo Nome do(a) Usuario(a) que fez o Fale Conosco %>
+                <th><font face="arial" size="3" color="black">E - mail</font></th>
+                <% /// Titulo E - mail do(a) Usuario(a) que fez o Fale Conosco %>
+                <th><font face="arial" size="3" color="black">Telefone</font></th>
+                <% /// Titulo Telefone do(a) Usuario(a) que fez o Fale Conosco %>    
+                <th><font face="arial" size="3" color="black">Descricao</font></th>
+                <% /// Titulo Descricao do Fale Conosco %>
+                <th><font face="arial" size="3" color="black">Operacao</font></th>
+                 <% /// Titulo de Opreacao para excluir o Fale Conosco %>   
+            </tr>
+        </thead><%
+                    while (dr.Read())
+                    {
+                        /// Efetuando a Leitura dos dados
+                        FaleConosco f = new FaleConosco();
+                            /// Instancia do Objeto do Fale Conosco
+                        f.Codigo = Convert.ToInt32(dr["CODIGO"]);
+                            /// Atributo Codigo do Fale Conosco que nao e visto pelo(a) Usuario(a)
+                        f.Nome = Convert.ToString(dr["NOME"]);
+                            /// Atributo Nome do(a) Usuario(a) que fez o fale conosco
+                        f.Email = Convert.ToString(dr["E_MAIL"]);
+                            /// Atributo E - mail do(a) Usuario(a) que fez o Fale conosco
+                        f.Telefone = Convert.ToString(dr["TELEFONE"]);
+                            /// Atributo Telefone do(a) Usuario(a) que fez o Fale conosco
+                        f.Descricao = Convert.ToString(dr["DESCRICAO"]);
+                            /// Atributo Descricao do Fale Conosco
+                   %>
+            
+        <tbody>
+               <tr>
+                    <% /// Lista de Informacao do Fale Conosco %>
+                <td><font face="arial" size="3" color="black"><%: f.Nome %></font></td>
+                    <% /// Informacao Nome do Fale Conosco %>
+                 <td><font face="arial" size="3" color="black"><%: f.Email %></font></td>
+                   <% /// Informacao E - mail do Fale Conosco %>
+                <td><font face="arial" size="3" color="black"><%: f.Telefone %></font></td>
+                    <% /// Informacao Telefone do(a) Usuario(a) que fez o Fale Conosco %>
+                 <td><font face="arial" size="3" color="black"><%: f.Descricao %></font></td>
+                    <% /// Informacao Descricao do Fale Conosco %>
+                 <td><a href="ExcluirFaleConosco.aspx?Codigo=<%: f.Codigo %>" class="btn btn-danger btn-sm"><font face="arial" size="3" color="black">Excluir</font></a></td>
+                    <% /// Botao de Excluir o Fale Conosco %>     
+               </tr>
+                   </tbody>
+                        <% /// FInaizacao da Informacao do Fale Conosco %>
+            <%
+                }
+         %>
+                                                
+                                           <%
+                                           con.Close();
+                                               /// Fecha a Conexao
+     %>
+                    </table>
+                <% /// Fecha a Tabela de Resultado %>
+        </div>
+    </form>
+</body>
+</html>

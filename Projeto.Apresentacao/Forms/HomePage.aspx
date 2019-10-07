@@ -11,67 +11,7 @@
     <script src="../Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <br />
-            <a href="Portal.aspx"><font color="white">Sair</font></a>
-            <table border align="right" bgcolor="black">
-                <tr bgcolor="white">
-                    <td><font face="arial" size="3"><%= DateTime.Now.DayOfWeek %> - <%= DateTime.Now.Day %> / <%=DateTime.Now.Month %> / <%= DateTime.Now.Year %> <%=DateTime.Now.Hour %> : <%=DateTime.Now.Minute %> Hrs</font></td>
-                </tr>
-            </table>
-
-            <% /// Menu da Pagina %>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                            <nav class="menu">
-                <ul>
-                    <li><font face="arial" size="5">Usuario(a)</font> 
-                        <ul>
-                            <a href="../Usuario/Cadastro"><li><font face="arial" size="5">Cadastrar Usuario(a)</font></li></a>
-                            <a href="ListUsuarioTrocarSenha.aspx"><li><font face="arial" size="5">Alterar a Senha do(a) Usuario(a)</font></li></a>
-                            <a href="ListUsuarioExcluir.aspx"><li><font face="arial" size="5">Excluir</font></li></a>
-                            <a href="../Usuario/ConsultaAlterarSenha"><li>Consultar</li></a>
-                        </ul>
-                    </li>
-                    <li><font face="arial" size="5">Lanche(s)</font>
-                        <% /// Menu de Lanche %>
-                            <ul>
-                                <a href="../Lanche/Cadastro"><li><font face="arial" size="5">Cadastrar Lanche(s)</font></li></a>
-                                <a href="ListLancheEdit.aspx"><li><font face="arial" size="5">Alterar</font></li></a>
-                                <a href="ListLancheExc.aspx"><li><font face="arial" size="5">Excluir</font></li></a>
-                                <a href="../Lanche/ConsultaAdministrador"><li><font fae="arial" size="5">Consultar</font></li></a>
-                            </ul>
-                     <li><font face="arial" size="5">Delivery</font>
-                            <% /// Menu de Delivery %>
-                        <ul>
-                            <a href="ExcDelivery.aspx"><li>Excluir</li></a>
-                        </ul>
-                      </li>
-
-                      <li><font face="arial" size="5">Fale Conosco</font>
-                            <% /// Mneu do Fale Conosco %>
-                        <ul>
-                            <a href="ExcFaleConosco.aspx"><li>Excluir</li></a>
-                        </ul>
-                        </li>
-                    </nav>
-
-                </ul>
-           
-            </div>
-
-        </div>
-
-    </div>
-
+    
     <div class="container body-content">
         @RenderBody()
         
@@ -110,6 +50,66 @@
                         { 
                             /// Codigo do(a) Usuario(a) Administrador(a)
                             %>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <br />
+            <a href="Portal.aspx"><font color="white">Sair</font></a>
+            <table border align="right" bgcolor="black">
+                <tr bgcolor="white">
+                    <td><font face="arial" size="3"><%= DateTime.Now.DayOfWeek %> - <%= DateTime.Now.Day %> / <%=DateTime.Now.Month %> / <%= DateTime.Now.Year %> <%=DateTime.Now.Hour %> : <%=DateTime.Now.Minute %> Hrs</font></td>
+                </tr>
+            </table>
+
+            <% /// Menu da Pagina %>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                            <nav class="menu">
+                <ul>
+                    <li><font face="arial" size="5">Usuario(a)</font> 
+                        <ul>
+                            <a href="../Usuario/Cadastro"><li><font face="arial" size="5">Cadastrar Usuario(a)</font></li></a>
+                            <a href="ListUsuarioTrocarSenha.aspx"><li><font face="arial" size="5">Alterar a Senha do(a) Usuario(a)</font></li></a>
+                            <a href="ListUsuarioExcluir.aspx"><li><font face="arial" size="5">Excluir</font></li></a>
+                            <a href="../Usuario/ConsultaAlterarSenha"><li>Consultar</li></a>
+                        </ul>
+                    </li>
+                    <%--<li><font face="arial" size="5">Lanche(s)</font>--%>
+                        <% /// Menu de Lanche %>
+                            <%--<ul>
+                                <a href="../Lanche/Cadastro"><li><font face="arial" size="5">Cadastrar Lanche(s)</font></li></a>
+                                <a href="ListLancheEdit.aspx"><li><font face="arial" size="5">Alterar</font></li></a>
+                                <a href="ListLancheExc.aspx"><li><font face="arial" size="5">Excluir</font></li></a>
+                                <a href="../Lanche/ConsultaAdministrador"><li><font fae="arial" size="5">Consultar</font></li></a>
+                            </ul>--%>
+                     <li><font face="arial" size="5">Delivery</font>
+                            <% /// Menu de Delivery %>
+                        <ul>
+                            <a href="ExcDelivery.aspx"><li>Excluir</li></a>
+                        </ul>
+                      </li>
+
+                      <li><font face="arial" size="5">Fale Conosco</font>
+                            <% /// Mneu do Fale Conosco %>
+                        <ul>
+                            <a href="ExcFaleConosco.aspx"><li>Excluir</li></a>
+                        </ul>
+                        </li>
+                    </nav>
+
+                </ul>
+           
+            </div>
+
+        </div>
+
+    </div>
 
                         <div class="container">
                 <!--Menu da Pagina Inicial-->
@@ -255,58 +255,58 @@
                              { 
                                  /// Se o Perfil for secretario(a)
                                  %>
-                            <div class="menu-container">
+                            <%--<div class="menu-container">--%>
                 <!--Menu da Pagina Inicial-->
-                <ul class="menu clearfix">
+<%--                <ul class="menu clearfix">
                     <li>
-                            <a href="#">Usuario(a)</a>
+                            <a href="#">Usuario(a)</a>--%>
                                     <% /// Menu de Usuario(a) %>
 
-                        <ul class="sub-menu clearfix">
+<%--                        <ul class="sub-menu clearfix">
                             
                             
-                            <li><a href="../Usuario/CadastroSecretaria">Cadastrar Usuario(a)</a></li>
+                            <li><a href="../Usuario/CadastroSecretaria">Cadastrar Usuario(a)</a></li>--%>
                                     <% /// Item de Cadastro de Usuario(a) %>
-                            <li><a href="../Usuario/ConsultaUsuario">Consultar o(a) Usuario(a)</a></li>
+                            <%--<li><a href="../Usuario/ConsultaUsuario">Consultar o(a) Usuario(a)</a></li>--%>
                                         <% /// Item de Consulta de Usuario(a) %>
-                        </ul>
+                        <%--</ul>
 
                     </li>
                     
                     <li>
                         <a href="#">Lanche(s)</a>
-                            <% /// Menu de Lanche %>
-                            <ul class="sub-menu clearfix">
+                            --%><% /// Menu de Lanche %>
+                            <%--<ul class="sub-menu clearfix">--%>
                             
                                 
-                            <li><a href="../Lanche/CadastroSecretaria">Cadastrar Lanche(s)</a></li>
+                            <%--<li><a href="../Lanche/CadastroSecretaria">Cadastrar Lanche(s)</a></li>--%>
                                     <% /// Item de Cadastro de Lanche %>
-                            <li><a href="../Lanche/ConsultaSecretaria">Consultar o(s) Lanche(s)</a></li>
+                            <%--<li><a href="../Lanche/ConsultaSecretaria">Consultar o(s) Lanche(s)</a></li>--%>
                                     <% /// Item de Consulta de Lanche %>
-                            </ul>
+                           <%-- </ul>
                             </li>
                     
                     <li>
                         <a href="#">Delivery</a>
-                                <% /// Menu de Delivery %>
-                        <ul class="sub-menu clearfix">
+                           --%>     <% /// Menu de Delivery %>
+                        <%--<ul class="sub-menu clearfix">
                             <li><a href="../Delivery/ConsultaSecretaria">Consultar Delivery</a></li>
-                                    <% /// Item de Consulta de Delivery %>
-                        </ul>
+                       --%>             <% /// Item de Consulta de Delivery %>
+                       <%-- </ul>
                     </li>
                          
                     <li>
-                        <a href="#">Fale Conosco</a>
+                        <a href="#">Fale Conosco</a>--%>
                             <% /// Menu do Fale Conosco %>
-                        <ul class="sub-menu clearfix">
-                            <li><a href="../FaleConosco/Consulta">Consultar o Fale Conosco</a></li>
+                        <%--<ul class="sub-menu clearfix">
+                            <li><a href="../FaleConosco/Consulta">Consultar o Fale Conosco</a></li>--%>
                                     <% /// Item de Consulta do Fale Conosco %>
-                        </ul>
+                <%--        </ul>
 
                     </li>
 
                     
-                </ul>        
+                </ul>--%>        
         
             
         
@@ -322,7 +322,7 @@
                         <br />
                         <br />
                                 <% /// Pula mais 2 linhas %>
-                                <center><img src="../Imagens/sim-retrô-2.jpg" width="850px" height="280px" /></center>
+                                <center><img src="../Imagens/montar-uma-lanchonete-é-um-bom-negócio.jpg" width="850px" height="280px" /></center>
                                     <% /// Imagem da Pagina %>
                   <br />
                         <% /// Pula mais 1 linha %>

@@ -100,6 +100,11 @@
     <Content Include="Content\estilos.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Forms\ExcDelivery.aspx" />
+    <Content Include="Forms\ExcFaleConosco.aspx" />
+    <Content Include="Forms\Excluir.aspx" />
+    <Content Include="Forms\ExcluirDelivery.aspx" />
+    <Content Include="Forms\ExcluirFaleConosco.aspx" />
     <Content Include="Forms\HomePage.aspx" />
     <Content Include="Forms\ListLancheEdit.aspx" />
     <Content Include="Forms\ListLancheExc.aspx" />
@@ -133,6 +138,41 @@
     <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\ReservaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Forms\ExcDelivery.aspx.cs">
+      <DependentUpon>ExcDelivery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ExcDelivery.aspx.designer.cs">
+      <DependentUpon>ExcDelivery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExcFaleConosco.aspx.cs">
+      <DependentUpon>ExcFaleConosco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ExcFaleConosco.aspx.designer.cs">
+      <DependentUpon>ExcFaleConosco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excluir.aspx.cs">
+      <DependentUpon>Excluir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Excluir.aspx.designer.cs">
+      <DependentUpon>Excluir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExcluirDelivery.aspx.cs">
+      <DependentUpon>ExcluirDelivery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ExcluirDelivery.aspx.designer.cs">
+      <DependentUpon>ExcluirDelivery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExcluirFaleConosco.aspx.cs">
+      <DependentUpon>ExcluirFaleConosco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ExcluirFaleConosco.aspx.designer.cs">
+      <DependentUpon>ExcluirFaleConosco.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
