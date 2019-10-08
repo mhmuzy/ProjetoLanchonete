@@ -147,17 +147,17 @@ namespace Projeto.Apresentacao.Controllers
 
         public ActionResult ConsultaMotoboy()
         {
-            List<UsuarioConsultaViewModel> lista = new List<UsuarioConsultaViewModel>();
+            List<FaleConoscoConsultaViewModel> lista = new List<FaleConoscoConsultaViewModel>();
 
             try
             {
-                UsuarioRepositorio rep = new UsuarioRepositorio();
-                foreach (Usuario u in rep.FindAll())
+                FaleConoscoRepositorio rep = new FaleConoscoRepositorio();
+                foreach (FaleConosco u in rep.FindAll())
                 {
-                    UsuarioConsultaViewModel model = new UsuarioConsultaViewModel();
-                    model.Codigo = u.Codigo;
+                    FaleConoscoConsultaViewModel model = new FaleConoscoConsultaViewModel();
                     model.Nome = u.Nome;
-                    model.Senha = u.Senha;
+                    model.Telefone = u.Telefone;
+                    model.Descricao = u.Descricao;
                     lista.Add(model);
                 }
             }

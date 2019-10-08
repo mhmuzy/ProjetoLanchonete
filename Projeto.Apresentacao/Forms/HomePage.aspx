@@ -439,8 +439,7 @@
                 <ul>
                     <li><font face="arial" size="5">Usuario(a)</font> 
                         <ul>
-                            <a href="../Usuario/CadastroSecretaria"><li>Cadastrar</li></a>
-                            <a href="../Usuario/ConsultaUsuario"><li>Consultar</li></a>
+                            <a href="../Usuario/ConsultaMotoboy"><li>Consultar</li></a>
                         </ul>
                     </li>
                     <%--<li><font face="arial" size="5">Lanche(s)</font>--%>
@@ -454,16 +453,16 @@
                      <li><font face="arial" size="5">Delivery</font>
                             <% /// Menu de Delivery %>
                         <ul>
-                            <a href="../Delivery/ConsultaSecretaria"><li>Consultar</li></a>
+                            <a href="../Delivery/ConsultaMotoboy"><li>Consultar</li></a>
                         </ul>
                       </li>
 
-                      <li><font face="arial" size="5">Fale Conosco</font>
+                      <%--<li><font face="arial" size="5">Fale Conosco</font>
                             <% /// Mneu do Fale Conosco %>
                         <ul>
-                            <a href="../FaleConosco/Consulta"><li>Consultar</li></a>
+                            <a href="../FaleConosco/ConsultaMotoboy"><li>Consultar</li></a>
                         </ul>
-                        </li>
+                        </li>--%>
                     </nav>
 
                 </ul>

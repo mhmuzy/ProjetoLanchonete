@@ -31,7 +31,40 @@
             @*Menu da Pagina*@
 
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav"></ul>
+                <ul class="nav navbar-nav">
+                    <nav class="menu">
+                        <ul>
+                            <li>
+                                <font face="arial" size="5">Usuario(a)</font>
+                                <ul>
+                                    <a href="../Usuario/ConsultaMotoboy"><li>Consultar</li></a>
+                                </ul>
+                            </li>
+                            @*<li>
+                                <font face="arial" size="5">Lanche(s)</font>
+                            <ul>
+                                    <a href="../Lanche/Cadastro"><li><font face="arial" size="5">Cadastrar Lanche(s)</font></li></a>
+                                    <a href="ListLancheEdit.aspx"><li><font face="arial" size="5">Alterar</font></li></a>
+                                    <a href="ListLancheExc.aspx"><li><font face="arial" size="5">Excluir</font></li></a>
+                                    <a href="../Lanche/ConsultaAdministrador"><li><font fae="arial" size="5">Consultar</font></li></a>
+                                </ul>*@
+                            <li>
+                                <font face="arial" size="5">Delivery</font>
+                                 <ul>
+                                    <a href="../Delivery/ConsultaMotoboy"><li>Consultar</li></a>
+                                </ul>
+                            </li>
+
+                            @*<li>
+                                <font face="arial" size="5">Fale Conosco</font>
+                                <ul>
+                                    <a href="../FaleConosco/ConsultaMotoboy"><li>Consultar</li></a>
+                                </ul>
+                            </li>*@
+                    </nav>
+
+
+                </ul>
 
             </div>
 
@@ -47,54 +80,54 @@
         <form id="form1" runat="server">
             <div>
                 <br /><br />
-                <div class="menu-container">
+                @*<div class="menu-container">*@
                     @*Menu da Pagina Inicial*@
-                    <ul class="menu clearfix">
-                        <li>
-                            <a href="#">Usuario(a)</a>
+                    @*<ul class="menu clearfix">*@
+                        @*<li>
+                            <a href="#">Usuario(a)</a>*@
                             @*Menu do(a) Usuario(a)*@
 
-                            <ul class="sub-menu clearfix">
+                            @*<ul class="sub-menu clearfix">
 
 
-                                <li><a href="../Usuario/ConsultaMotoboy">Consultar o(a) Usuario(a)</a></li>
+                                <li><a href="../Usuario/ConsultaMotoboy">Consultar o(a) Usuario(a)</a></li>*@
                                 @*Item de Consultar o(a) Usuario(a)*@
-                            </ul>
+                            @*</ul>
 
                         </li>
 
                         <li>
-                            <a href="#">Lanche(s)</a>
+                            <a href="#">Lanche(s)</a>*@
                             @*Menu Lanche*@
-                            <ul class="sub-menu clearfix">
+                            @*<ul class="sub-menu clearfix">
 
 
-                                <li><a href="../Lanche/ConsultaMotoboy">Consultar o(s) Lanche(s)</a></li>
+                                <li><a href="../Lanche/ConsultaMotoboy">Consultar o(s) Lanche(s)</a></li>*@
                                 @*Item de Consultar Lanche*@
-                            </ul>
+                            @*</ul>
                         </li>
 
                         <li>
-                            <a href="#">Delivery</a>
+                            <a href="#">Delivery</a>*@
                             @*Menu Delivery*@
-                            <ul class="sub-menu clearfix">
-                                <li><a href="../Delivery/ConsultaMotoboy">Consultar Delivery</a></li>
+                            @*<ul class="sub-menu clearfix">
+                                <li><a href="../Delivery/ConsultaMotoboy">Consultar Delivery</a></li>*@
                                 @*Item de Consultar o Delivery*@
-                            </ul>
+                            @*</ul>
                         </li>
 
                         <li>
-                            <a href="#">Fale Conosco</a>
+                            <a href="#">Fale Conosco</a>*@
                             @*Mneu do Fale Conosco*@
-                            <ul class="sub-menu clearfix">
-                                <li><a href="../FaleConosco/ConsultaMotoboy">Consultar o Fale Conosco</a></li>
+                            @*<ul class="sub-menu clearfix">
+                                <li><a href="../FaleConosco/ConsultaMotoboy">Consultar o Fale Conosco</a></li>*@
                                 @*Item de Consultar o Fale Conosco*@
-                            </ul>
+                            @*</ul>
 
                         </li>
 
 
-                    </ul>
+                    </ul>*@
 
 
 
@@ -110,7 +143,7 @@
                     <br />
                     <br />
                     @*Pula mais 2 linhas*@
-                    <center><img src="../Imagens/sim-retrô-2.jpg" width="850px" height="280px" /></center>
+                    <center><img src="~/Imagens/montar-uma-lanchonete-é-um-bom-negócio.jpg" width="850px" height="280px" /></center>
                     @*Imagem da Pagina*@
                     <br />
                 </div>
