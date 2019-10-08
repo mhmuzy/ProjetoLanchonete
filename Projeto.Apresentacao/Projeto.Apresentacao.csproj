@@ -89,6 +89,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Banco.mdf" />
+    <Content Include="App_Data\Banco2.mdf" />
+    <Content Include="App_Data\Banco2_log.ldf">
+      <DependentUpon>Banco2.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\Banco_log.ldf">
       <DependentUpon>Banco.mdf</DependentUpon>
     </Content>

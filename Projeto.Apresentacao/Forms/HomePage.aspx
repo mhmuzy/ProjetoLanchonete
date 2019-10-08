@@ -252,7 +252,90 @@
                             <% /// Imagem da Pagina %>
                   <br /> <% }
                              else if (U.CodigoUsuario.Equals(2))
-                             { 
+                             { %>
+                                 <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <br />
+            <a href="Portal.aspx"><font color="white">Sair</font></a>
+            <table border align="right" bgcolor="black">
+                <tr bgcolor="white">
+                    <td><font face="arial" size="3"><%= DateTime.Now.DayOfWeek %> - <%= DateTime.Now.Day %> / <%=DateTime.Now.Month %> / <%= DateTime.Now.Year %> <%=DateTime.Now.Hour %> : <%=DateTime.Now.Minute %> Hrs</font></td>
+                </tr>
+            </table>
+
+            <% /// Menu da Pagina %>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                            <nav class="menu">
+                <ul>
+                    <li><font face="arial" size="5">Usuario(a)</font> 
+                        <ul>
+                            <a href="../Usuario/CadastroSecretaria"><li>Cadastrar</li></a>
+                            <a href="../Usuario/ConsultaUsuario"><li>Consultar</li></a>
+                        </ul>
+                    </li>
+                    <%--<li><font face="arial" size="5">Lanche(s)</font>--%>
+                        <% /// Menu de Lanche %>
+                            <%--<ul>
+                                <a href="../Lanche/Cadastro"><li><font face="arial" size="5">Cadastrar Lanche(s)</font></li></a>
+                                <a href="ListLancheEdit.aspx"><li><font face="arial" size="5">Alterar</font></li></a>
+                                <a href="ListLancheExc.aspx"><li><font face="arial" size="5">Excluir</font></li></a>
+                                <a href="../Lanche/ConsultaAdministrador"><li><font fae="arial" size="5">Consultar</font></li></a>
+                            </ul>--%>
+                     <li><font face="arial" size="5">Delivery</font>
+                            <% /// Menu de Delivery %>
+                        <ul>
+                            <a href="../Delivery/ConsultaSecretaria"><li>Consultar</li></a>
+                        </ul>
+                      </li>
+
+                      <li><font face="arial" size="5">Fale Conosco</font>
+                            <% /// Mneu do Fale Conosco %>
+                        <ul>
+                            <a href="../FaleConosco/Consulta"><li>Consultar</li></a>
+                        </ul>
+                        </li>
+                    </nav>
+
+                </ul>
+           
+            </div>
+
+        </div>
+
+    </div>
+
+                        <div class="container">
+                <!--Menu da Pagina Inicial-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                            <nav class="menu">
+                <ul>
+                    <li><font face="arial" size="2">Usuario(a)</font> 
+                        <ul>
+                            <a href="../Usuario/Cadastro"><li>Cadastrar Usuario(a)</li></a>
+                            <li><a href="ListUsuarioTrocarSenha.aspx">Alterar a Senha do(a) Usuario(a)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                    </nav>
+
+                </button>
+            
+                            </div>
+            </div>
+            </div>
+            
                                  /// Se o Perfil for secretario(a)
                                  %>
                             <%--<div class="menu-container">--%>
@@ -329,61 +412,121 @@
                        <% }
                            else if (U.CodigoUsuario.Equals(3))
                            { 
+
                                /// Se o Perfil for Motoboy
                                %>
-                                        <div class="menu-container">
+                            <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <br />
+            <a href="Portal.aspx"><font color="white">Sair</font></a>
+            <table border align="right" bgcolor="black">
+                <tr bgcolor="white">
+                    <td><font face="arial" size="3"><%= DateTime.Now.DayOfWeek %> - <%= DateTime.Now.Day %> / <%=DateTime.Now.Month %> / <%= DateTime.Now.Year %> <%=DateTime.Now.Hour %> : <%=DateTime.Now.Minute %> Hrs</font></td>
+                </tr>
+            </table>
+
+            <% /// Menu da Pagina %>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                            <nav class="menu">
+                <ul>
+                    <li><font face="arial" size="5">Usuario(a)</font> 
+                        <ul>
+                            <a href="../Usuario/CadastroSecretaria"><li>Cadastrar</li></a>
+                            <a href="../Usuario/ConsultaUsuario"><li>Consultar</li></a>
+                        </ul>
+                    </li>
+                    <%--<li><font face="arial" size="5">Lanche(s)</font>--%>
+                        <% /// Menu de Lanche %>
+                            <%--<ul>
+                                <a href="../Lanche/Cadastro"><li><font face="arial" size="5">Cadastrar Lanche(s)</font></li></a>
+                                <a href="ListLancheEdit.aspx"><li><font face="arial" size="5">Alterar</font></li></a>
+                                <a href="ListLancheExc.aspx"><li><font face="arial" size="5">Excluir</font></li></a>
+                                <a href="../Lanche/ConsultaAdministrador"><li><font fae="arial" size="5">Consultar</font></li></a>
+                            </ul>--%>
+                     <li><font face="arial" size="5">Delivery</font>
+                            <% /// Menu de Delivery %>
+                        <ul>
+                            <a href="../Delivery/ConsultaSecretaria"><li>Consultar</li></a>
+                        </ul>
+                      </li>
+
+                      <li><font face="arial" size="5">Fale Conosco</font>
+                            <% /// Mneu do Fale Conosco %>
+                        <ul>
+                            <a href="../FaleConosco/Consulta"><li>Consultar</li></a>
+                        </ul>
+                        </li>
+                    </nav>
+
+                </ul>
+           
+            </div>
+
+        </div>
+
+    </div>
+                                        <%--<div class="menu-container">--%>
                 <!--Menu da Pagina Inicial-->
-                <ul class="menu clearfix">
+                <%--<ul class="menu clearfix">
                     <li>
                             <a href="#">Usuario(a)</a>
-                                    <% /// Menu do(a) Usuario(a) %>
+                --%>                    <% /// Menu do(a) Usuario(a) %>
 
-                        <ul class="sub-menu clearfix">
+                    <%--    <ul class="sub-menu clearfix">
                             
                             
                             <li><a href="../Usuario/ConsultaMotoboy">Consultar o(a) Usuario(a)</a></li>
-                                    <% /// Item de Consultar o(a) Usuario(a) %>
-                        </ul>
+                    --%>                <% /// Item de Consultar o(a) Usuario(a) %>
+                        <%--</ul>
 
                     </li>
                     
                     <li>
-                        <a href="#">Lanche(s)</a>
+                        <a href="#">Lanche(s)</a>--%>
                             <% /// Menu Lanche %>
-                            <ul class="sub-menu clearfix">
+                            <%--<ul class="sub-menu clearfix">
                             
                                 
                             <li><a href="../Lanche/ConsultaMotoboy">Consultar o(s) Lanche(s)</a></li>
-                                    <% /// Item de Consultar Lanche %>
-                            </ul>
+                            --%>        <% /// Item de Consultar Lanche %>
+                            <%--</ul>
                             </li>
                     
                     <li>
                         <a href="#">Delivery</a>
-                            <% /// Menu Delivery %>
-                        <ul class="sub-menu clearfix">
-                            <li><a href="../Delivery/ConsultaMotoboy">Consultar Delivery</a></li>
+                            --%><% /// Menu Delivery %>
+                        <%--<ul class="sub-menu clearfix">
+                            <li><a href="../Delivery/ConsultaMotoboy">Consultar Delivery</a></li>--%>
                                 <% /// Item de Consultar o Delivery %>
-                        </ul>
+                        <%--</ul>
                     </li>
                          
                     <li>
-                        <a href="#">Fale Conosco</a>
+                        <a href="#">Fale Conosco</a>--%>
                             <% /// Mneu do Fale Conosco %>
-                        <ul class="sub-menu clearfix">
-                            <li><a href="../FaleConosco/ConsultaMotoboy">Consultar o Fale Conosco</a></li>
+                        <%--<ul class="sub-menu clearfix">
+                            <li><a href="../FaleConosco/ConsultaMotoboy">Consultar o Fale Conosco</a></li>--%>
                                 <% /// Item de Consultar o Fale Conosco %>
-                        </ul>
+                        <%--</ul>
 
                     </li>
 
                     
                 </ul>        
-        
+        --%>
             
         
         <hr />
-            <% /// Divisoria da Pagina %>                                    
+            <% /// Divisoria da Pagina %>
+                        <br />
                         <strong>Seja Bem Vindo a Aplicacao da Lanchonete!</strong>
                                             <% /// Titulo da Pagina %>
                         <br />
@@ -394,7 +537,7 @@
                         <br />
                         <br />
                             <% /// Pula mais 2 linhas %>
-                                            <center><img src="../Imagens/sim-retrô-2.jpg" width="850px" height="280px" /></center>
+                                            <center><img src="../Imagens/montar-uma-lanchonete-é-um-bom-negócio.jpg" width="850px" height="280px" /></center>
                                                     <% /// Imagem da Pagina %>
                                             <br />
                                                 <% /// Pula mais 1 linha %>
