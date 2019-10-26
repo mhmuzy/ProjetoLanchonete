@@ -15,6 +15,7 @@ namespace Projeto.Apresentacao.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Cadastro(DeliveryCadastroViewModel model)
         {

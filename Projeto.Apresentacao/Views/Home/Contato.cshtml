@@ -1,6 +1,7 @@
 ﻿@{
     ViewBag.Title = "Contato";
-    Layout = "~/Views/Layout/Layout5.cshtml";
+    Layout = Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
+                                                    : "~/Views/Layout/Layout5.cshtml";
 }
 @*Layout da Pagina*@
 <h2>Coloque a sua descricao no Fale Conosco:</h2>

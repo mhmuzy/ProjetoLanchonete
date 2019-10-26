@@ -13,6 +13,7 @@ namespace Projeto.Apresentacao
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
         }
     }
 }

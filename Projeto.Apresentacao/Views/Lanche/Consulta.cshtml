@@ -1,6 +1,7 @@
 ﻿@{
     ViewBag.Title = "Consulta";
-    Layout = "~/Views/Layout/Layout6.cshtml";
+    Layout =  Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
+                                                    : "~/Views/Layout/Layout6.cshtml";
 }
 @*Layout da Pagina*@
 <h2>Consulta</h2>

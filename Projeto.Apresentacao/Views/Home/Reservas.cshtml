@@ -1,6 +1,7 @@
 ﻿@{
     ViewBag.Title = "Reservas";
-    Layout = "~/Views/Layout/Layout4.cshtml";
+    Layout = Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
+                                                    : "~/Views/Layout/Layout4.cshtml";
 }
 @*Layout da Pagina*@
 <h2>Agenda aqui a sua Reserva!</h2>

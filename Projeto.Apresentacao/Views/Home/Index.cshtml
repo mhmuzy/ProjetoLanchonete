@@ -1,5 +1,7 @@
 ﻿@{
     ViewBag.Title = "Index";
+    Layout = Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
+                                                    : "~/Views/Layout/Layout.cshtml";
 
 }
 <div class="navbar navbar-inverse navbar-fixed-top">
