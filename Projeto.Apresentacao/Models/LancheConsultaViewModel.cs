@@ -27,12 +27,31 @@ namespace Projeto.Apresentacao.Models
             get;
             set;
         }
-        public string Preco
+        public double Preco
         /// Atributo Preco do Lanche
         {
             get;
             set;
         }
 
+        public string Descricao
+        /// Declaracao do Atributo Preco do Lanche
+        {
+            get;
+            set;
+        }
+        public int Estoque
+        /// Declaracao do Atributo Preco do Lanche
+        {
+            get;
+            set;
+        }
+        public string Status
+        /// Declaracao do Atributo Status do Lanche que define se ele
+        /// Foi excluido ou nao da aplicacao
+        {
+            get;
+            set;
+        }
     }
 }

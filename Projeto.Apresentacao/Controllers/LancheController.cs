@@ -162,7 +162,9 @@ namespace Projeto.Apresentacao.Controllers
                     LancheConsultaViewModel model = new LancheConsultaViewModel();
                     model.Nome = L.Nome;
                     model.Preco = L.Preco;
-
+                    model.Descricao = L.Descricao;
+                    model.Estoque = L.Estoque;
+                    model.Status = L.Estoque == 1 ? "Sim" : "Não";
                     lista.Add(model);
                 }
             }

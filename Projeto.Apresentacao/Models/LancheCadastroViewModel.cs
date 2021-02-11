@@ -23,7 +23,7 @@ namespace Projeto.Apresentacao.Models
             set;
         }
 
-        public string Preco
+        public double Preco
         /// Atributo do Preco do Lanche
         {
             get;

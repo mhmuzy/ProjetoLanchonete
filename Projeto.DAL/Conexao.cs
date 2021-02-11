@@ -30,7 +30,7 @@ namespace Projeto.DAL
         protected void OpenConnection()
         /// Metodo de Abrir Conexao
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["COTI"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["WithLove"].ConnectionString);
             con.Open();
             /// Abrindo a Conexao
         }

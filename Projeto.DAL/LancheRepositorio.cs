@@ -73,7 +73,7 @@ namespace Projeto.DAL
         {
             OpenConnection();
             /// Abre a Conexao
-            string query = "SELECT * FROM LANCHE WHERE STATUS = 'ABERTO'";
+            string query = "SELECT * FROM Produto";
             /// Conversa com a Base
             com = new SqlCommand(query, con);
             /// Instancia do SqlCommand
@@ -88,11 +88,13 @@ namespace Projeto.DAL
                 Lanche L = new Lanche();
                 /// Instancia da Entidade Lanche
 
-                L.Nome = Convert.ToString(dr["NOME"]);
+                L.Nome = Convert.ToString(dr["Nome"]);
                 /// Campo Nome
-                L.Preco = Convert.ToString(dr["PRECO"]);
+                L.Preco = Convert.ToDouble(dr["Preco"]);
                 /// Campo Preco
-
+                L.Descricao = Convert.ToString(dr["Descricao"]);
+                L.Estoque = Convert.ToInt32(dr["Estoque"]);
+                
                 lista.Add(L);
 
             }
@@ -125,7 +127,7 @@ namespace Projeto.DAL
 
                 l.Nome = Convert.ToString(dr["NOME"]);
                 /// Campo Nome
-                l.Preco = Convert.ToString(dr["PRECO"]);
+                l.Preco = Convert.ToDouble(dr["PRECO"]);
                 /// Campo Preco
             }
 

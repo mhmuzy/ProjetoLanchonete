@@ -96,6 +96,10 @@
     <Content Include="App_Data\Banco_log.ldf">
       <DependentUpon>Banco.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\WithLove.mdf" />
+    <Content Include="App_Data\WithLove_log.ldf">
+      <DependentUpon>WithLove.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -122,6 +126,7 @@
     <Content Include="Forms\update.aspx" />
     <Content Include="Forms\UpdateLanche.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Imagens\129650115_315009846239952_7192400901753567180_n.jpg" />
     <Content Include="Imagens\montar-uma-lanchonete-é-um-bom-negócio.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

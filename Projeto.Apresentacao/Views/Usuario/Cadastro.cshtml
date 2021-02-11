@@ -1,50 +1,79 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Lanchonete</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
-</head>
-<body class="container">
-
-    @*Pula 2 linhas Para o Titulo da Pagina nao ficar muito em cima*@
-    <strong><font face="arial" size="3">Cadastro de Usuarios</font></strong>
-    @*Titulo da Pagina*@
-    <br />
-    @*Pula mais 1 linha*@
-    <center><a href="../Usuario/Administrator">Voltar</a></center>
-    @*Link de voltar*@
-    <br />
-    @*Pula mais 1 linha*@
-
-    @*Layout da Pagina*@
-    @model Projeto.Apresentacao.Models.UsuarioCadastroViewModel
-    @*Model da Pagina*@
-    @using (Html.BeginForm())
-    {
-        @*Formulario*@
-        <div class="row">
-            <div class="col-md-4">
-                <label><font face="arial" size="3" color="black">Codigo Usuario:</font></label>
-                @Html.TextBoxFor(model => model.CodigoUsuario)
-                @*Campo Codigo do(a) Usuario(a)*@
-                <br /><br />
-                <label><font face="arial" size="3" color="black">Login:</font></label>
-                @Html.TextBoxFor(model => model.Nome)
-                @*Campo Nome do(a) Usuario(a)*@
-                <br /><br />
-                <label><font face="arial" size="3" color="black">Senha:</font></label>
-                @Html.PasswordFor(model => model.Senha)
-                @*Campo Senha do(a) Usuario(a)*@
-                <br /><br />
-                <input type="submit" class="btn btn-primary btn-sm" value="Efetuar Cadastro" />
-                @*Botao de Efetuar o Cadastro*@
-                <hr />
-
-                <strong><font face="arial" size="3" color="black">@ViewBag.Message</font></strong>
-                @*Mensagem da Pagina*@
-            </div>
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @*@Html.ActionLink("Localização", "Localizacao", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            @*            @Html.ActionLink("Joias e Semi joias", "Consulta", "Lanche", new { area = "" }, new { @class = "navbar-brand" })*@
+            @*@Html.ActionLink("Delivery", "Delivery", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Reservas", "Cadastro", "Reserva", new { area = "" }, new { @class = "navbar-brand" })*@
+            @*@Html.ActionLink("Contato", "Cadastro", "FaleConosco", new { area = "" }, new { @class = "navbar-brand" })*@
+            <a href="~/Forms/Portal.aspx" class="navbar-brand">Area Restrita</a>
+            @*Links do Layout*@
         </div>
-    }
+        <br />
+        <table border align="right" bgcolor="black">
+            <tr bgcolor="white">
+                <td><font face="arial" size="3">@DateTime.Now.DayOfWeek - @DateTime.Now.Day / @DateTime.Now.Month / @DateTime.Now.Year  @DateTime.Now.Hour : @DateTime.Now.Minute Hrs</font></td>
+            </tr>
+        </table>
+        @*Relogio da Pagina*@
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav"></ul>
+        </div>
+    </div>
+</div>
+<br />
+@*Pula 2 linhas Para o Titulo da Pagina nao ficar muito em cima*@
+<font face="arial" size="5">Cadastre-se na With Love</font>
+@*Titulo da Pagina*@
+@*Link de voltar*@
+<br /><br />
+@*Pula mais 1 linha*@
+
+@*Layout da Pagina*@
+@model Projeto.Apresentacao.Models.UsuarioCadastroViewModel
+@*Model da Pagina*@
+@using (Html.BeginForm())
+{
+    @*Formulario*@
+    @*<div class="row">*@
+    @*<div class="col-md-40">*@
+          <table>
+              <tr>
+                  <td>
+                      Login:
+                  </td>
+                  <td align="left">
+                      <div style="margin-left:1em">
+                          @Html.TextBoxFor(model => model.Nome, new { @Class = "form-control" })
+                      </div>
+                  </td>
+              </tr>
+              <tr style="margin-top:7em">
+                  <td>
+                     <div style="margin-top:1em"> Senha:</div>
+                  </td>
+                  <td align="left">
+                      <div style="margin-left:1em">
+                          <div style="margin-top:1em">@Html.PasswordFor(model => model.Senha, new { @Class = "form-control" })</div>
+                      </div>
+                  </td>
+              </tr>
+<tr>
+    <td colspan="2" align="center">
+        <div style="margin-top:1em"><input type="submit" class="btn btn-primary btn-sm" value="Cadastrar" /></div>
+
+</td>
+</tr>
+    </table>
+    <br />
+    <strong><font face="arial" size="3" color="black">@ViewBag.Message</font></strong>
+    @*Mensagem da Pagina*@
+    @* </div> *@
+    @* </div> *@
+}

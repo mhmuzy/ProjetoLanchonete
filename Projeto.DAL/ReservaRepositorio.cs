@@ -16,18 +16,23 @@ namespace Projeto.DAL
         {
             OpenConnection();
             /// Abre a Conexao
-            string query = "INSERT INTO RESERVA(NOME, E_MAIL, TELEFONE, DESCRICAO, STATUS)VALUES(@NOME, @E_MAIL, @TELEFONE, @DESCRICAO, 'ABERTO')";
+            string query = "INSERT INTO SOCIO(NOME, TELEFONE, CELULAR, CPF, EMAIL, ENDERECO)VALUES(@NOME, @TELEFONE, @CELULAR, @CPF, @EMAIL, @ENDERECO)";
             /// Conversa com a Base
             com = new SqlCommand(query, con);
             /// Instancia do SqlCommand
             com.Parameters.AddWithValue("@NOME", R.Nome);
             /// Campo Nome do Lanche
-            com.Parameters.AddWithValue("@E_MAIL", R.Email);
             /// Campo Preco do Lancje
             com.Parameters.AddWithValue("@TELEFONE", R.Telefone);
 
-            com.Parameters.AddWithValue("@DESCRICAO", R.Descricao);
-            
+            com.Parameters.AddWithValue("@CELULAR", R.Descricao);
+
+            com.Parameters.AddWithValue("@CPF", R.Cpf);
+
+            com.Parameters.AddWithValue("@EMAIL", R.Email);
+
+            com.Parameters.AddWithValue("@ENDERECO", R.Endereco);
+
             com.ExecuteNonQuery();
             /// Roda a Query
             CloseConnection();
@@ -94,7 +99,7 @@ namespace Projeto.DAL
 
                 L.Nome = Convert.ToString(dr["NOME"]);
                 /// Campo Nome
-                L.Preco = Convert.ToString(dr["PRECO"]);
+                L.Preco = Convert.ToDouble(dr["PRECO"]);
                 /// Campo Preco
 
                 lista.Add(L);
@@ -129,7 +134,7 @@ namespace Projeto.DAL
 
                 l.Nome = Convert.ToString(dr["NOME"]);
                 /// Campo Nome
-                l.Preco = Convert.ToString(dr["PRECO"]);
+                l.Preco = Convert.ToDouble(dr["PRECO"]);
                 /// Campo Preco
             }
 

@@ -25,7 +25,6 @@ namespace Projeto.Apresentacao.Controllers
                 try
                 {
                     Usuario u = new Usuario();
-                    u.CodigoUsuario = model.CodigoUsuario;
                     u.Nome = model.Nome;
                     u.Senha = model.Senha;
 

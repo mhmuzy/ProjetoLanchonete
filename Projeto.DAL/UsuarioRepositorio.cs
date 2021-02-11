@@ -16,16 +16,14 @@ namespace Projeto.DAL
         {
             OpenConnection();
             /// Abre a Conexao
-            string query = "INSERT INTO USUARIO (NOME, SENHA, CODIGO_USUARIO, STATUS) VALUES (@NOME, @SENHA, @CODIGO_USUARIO, 'ABERTO')";
+            string query = "INSERT INTO USUARIO (LOGIN, SENHA, TipoUsuario) VALUES (@LOGIN, @SENHA, 2)";
             /// Conversa com a Base
             com = new SqlCommand(query, con);
             /// Instancia com o SqlCommand
-            com.Parameters.AddWithValue("@NOME", U.Nome);
+            com.Parameters.AddWithValue("@LOGIN", U.Nome);
             /// Campo Nome
             com.Parameters.AddWithValue("@SENHA", U.Senha);
             /// Campo Senha
-            com.Parameters.AddWithValue("@CODIGO_USUARIO", U.CodigoUsuario);
-            /// Campo Codigo do(a) Usuario(a)
             com.ExecuteNonQuery();
             /// Roda a Querie
             CloseConnection();

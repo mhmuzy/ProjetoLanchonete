@@ -1,9 +1,4 @@
-﻿@{
-    ViewBag.Title = "Index";
-    Layout = Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
-                                                    : "~/Views/Layout/Layout.cshtml";
-
-}
+﻿
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -13,11 +8,11 @@
                 <span class="icon-bar"></span>
             </button>
             @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            @Html.ActionLink("Localização", "Localizacao", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            @Html.ActionLink("Lanche", "Consulta", "Lanche", new { area = "" }, new { @class = "navbar-brand" })
-            @Html.ActionLink("Delivery", "Delivery", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            @Html.ActionLink("Reservas", "Cadastro", "Reserva", new { area = "" }, new { @class = "navbar-brand" })
-            @Html.ActionLink("Contato", "Cadastro", "FaleConosco", new { area = "" }, new { @class = "navbar-brand" })
+            @*@Html.ActionLink("Localização", "Localizacao", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            @Html.ActionLink("Joias e Semi joias", "Consulta", "Lanche", new { area = "" }, new { @class = "navbar-brand" })
+            @*@Html.ActionLink("Delivery", "Delivery", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Reservas", "Cadastro", "Reserva", new { area = "" }, new { @class = "navbar-brand" })*@
+            @*@Html.ActionLink("Contato", "Cadastro", "FaleConosco", new { area = "" }, new { @class = "navbar-brand" })*@
             <a href="~/Forms/Portal.aspx" class="navbar-brand">Area Restrita</a>
             @*Links do Layout*@
         </div>
@@ -34,27 +29,27 @@
     </div>
 </div>
 @*Layout da Pagina*@
-<h2>Seja Bem vindo ao site da Lanchonete</h2>
-
+<h2>Seja Bem vindo ao site a With Love</h2>
+<font face="arial" size="5">Joias e Semi joias</font>
 <div class="container body-content">
     @*@RenderBody()*@
     <hr />
     @*Renderizacao*@
     <br />
     @*Pula mais 1 linha*@
-    <center><img src="~/Imagens/montar-uma-lanchonete-é-um-bom-negócio.jpg" width="850px" height="280px" /></center>
+    <center><img src="~/Imagens/129650115_315009846239952_7192400901753567180_n.jpg" width="850px" height="280px" /></center>
     @*Imagem da Pagina Centralizada*@
     <br /><br />
     @*Pula 2 linhas*@
-    <center><strong>A LANCHONETE MAIS COMPLETA E SURPREENDENTE DA CIDADE</strong></center>
+    @*<center><strong>A LANCHONETE MAIS COMPLETA E SURPREENDENTE DA CIDADE</strong></center>*@
     @*Titulo da Pagina*@
     <br />
     @*Pula mais 1 linha*@
-    <center>
+    @*<center>
         Em ambiente descolado e urbano, a Lanchonete é completa. Com um cardápio <br />
         agora assinado e recheado de receitas que vão bem além dos sanduíches, <br />
-        está sempre pronta para surpreender com boa comida em qualquer ocasião.
-    </center>
+        está sempre pronta para surpreender com boa comida em qualquer ocasião.*@
+    @*</center>*@
     @*Texto da Pagina*@
     <br />
     @*Pula mais 1 linha*@

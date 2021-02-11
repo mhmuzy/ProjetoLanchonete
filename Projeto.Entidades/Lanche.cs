@@ -29,7 +29,19 @@ namespace Projeto.Entidades
             get;
             set;
         }
-        public string Preco
+        public double Preco
+        /// Declaracao do Atributo Preco do Lanche
+        {
+            get;
+            set;
+        }
+        public string Descricao
+        /// Declaracao do Atributo Preco do Lanche
+        {
+            get;
+            set;
+        }
+        public int Estoque
         /// Declaracao do Atributo Preco do Lanche
         {
             get;
@@ -56,7 +68,7 @@ namespace Projeto.Entidades
                         /// Sobremesa, doce ou salgado
                         , string nome
                         /// Parametro Nome do Lanche
-                        , string preco
+                        , double preco
                         /// Parametro Preco do Lanche
                         , string status
                         /// Parametro Status do Lanche que define se o lanche foi excluido

@@ -42,7 +42,7 @@ namespace Projeto.Apresentacao.Models
 
         [Required(ErrorMessage = "Por favor, informe o Preco do Lanche")]
         /// Campo de Requerimento Preco do Lanche
-        public string Preco
+        public double Preco
         /// Atributo Preco do Lanche
         {
             get;

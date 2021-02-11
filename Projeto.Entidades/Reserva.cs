@@ -44,6 +44,18 @@ namespace Projeto.Entidades
             get;
             set;
         }
+        public string Cpf
+        /// Declaracao do Atributo Descricao da Reserva
+        {
+            get;
+            set;
+        }
+        public string Endereco
+        /// Declaracao do Atributo Descricao da Reserva
+        {
+            get;
+            set;
+        }
 
         public Reserva()
         {

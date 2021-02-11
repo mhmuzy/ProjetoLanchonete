@@ -1,10 +1,35 @@
-﻿@{
-    ViewBag.Title = "Consulta";
-    Layout =  Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
-                                                    : "~/Views/Layout/Layout6.cshtml";
-}
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @*@Html.ActionLink("Localização", "Localizacao", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+@*            @Html.ActionLink("Joias e Semi joias", "Consulta", "Lanche", new { area = "" }, new { @class = "navbar-brand" })*@
+            @*@Html.ActionLink("Delivery", "Delivery", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Reservas", "Cadastro", "Reserva", new { area = "" }, new { @class = "navbar-brand" })*@
+            @*@Html.ActionLink("Contato", "Cadastro", "FaleConosco", new { area = "" }, new { @class = "navbar-brand" })*@
+            <a href="~/Forms/Portal.aspx" class="navbar-brand">Area Restrita</a>
+            @*Links do Layout*@
+        </div>
+        <br />
+        <table border align="right" bgcolor="black">
+            <tr bgcolor="white">
+                <td><font face="arial" size="3">@DateTime.Now.DayOfWeek - @DateTime.Now.Day / @DateTime.Now.Month / @DateTime.Now.Year  @DateTime.Now.Hour : @DateTime.Now.Minute Hrs</font></td>
+            </tr>
+        </table>
+        @*Relogio da Pagina*@
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav"></ul>
+        </div>
+    </div>
+</div>
+
 @*Layout da Pagina*@
-<h2>Consulta</h2>
+<h2>Joias e Semi joias</h2>
 @*Titulo da Pagina*@
 @model List<Projeto.Apresentacao.Models.LancheConsultaViewModel>
 @*Model da Pagina*@
@@ -21,17 +46,22 @@
             @*Titulo Nome do Lanche*@
             <th><font face="arial" size="3" color="black">Preco</font></th>
             @*Titulo Preco do Lanche*@
+            <th><font face="arial" size="3" color="black">Descrição</font></th>
+            <th><font face="arial" size="3" color="black">Está em Estoque</font></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
+
                 @*Inicializacao da Informacao da Tabela Resultado*@
                 <td><font face="arial" size="3" color="black">@item.Nome</font></td>
                 @*Informacao Nome do Lanche*@
                 <td><font face="arial" size="3" color="black">@item.Preco</font></td>
                 @*Informacao Preco do Lanche*@
+                <td><font face="arial" size="3" color="black">@item.Descricao</font></td>
+                <td><font face="arial" size="3" color="black">@item.Status</font></td>
             </tr>
         }
     </tbody>

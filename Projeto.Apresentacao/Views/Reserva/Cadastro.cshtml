@@ -1,56 +1,132 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Lanchonete</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
-</head>
-<body class="container">
-    <br /><br />
-    @*Pula 2 linhas Para o Titulo da Pagina nao ficar muito em cima*@
-    <strong><font face="arial" size="3">Faca aqui a sua reserva!</font></strong>
-    @*Titulo da Pagina*@
-    <br />
-    <br />
-    @*Pula 2 linhas*@
-    @{
-        ViewBag.Title = "Lanchonete";
-        Layout = "~/Views/Layout/Layout6.cshtml";
-    }
-    @*Layout da Pagina*@
-    @model Projeto.Apresentacao.Models.ReservaCadastroViewModel
-    @*Model da Pagina*@
-    @using (Html.BeginForm())
-    {
-        @*Formulario no MVC*@
-        <div class="row">
-            <div class="col-md-4">
-                <label><font face="arial" size="3" color="black">Nome:</font></label>
-                @Html.TextBoxFor(Model => Model.Nome)
-                @*Campo Nome do(a) Usuario(a) que vai fazer a reserva*@
-                <br /><br />
-                <label><font face="arial" size="3" color="black">Telefone:</font></label>
-                @Html.TextBoxFor(model => model.Telefone)
-                @*Campo Telefone do(a) Usuario(a) que vai fazer a Reserva*@
-                <br /><br />
-                <label><font face="arial" size="3" color="black">E - mail:</font></label>
-                @Html.TextBoxFor(model => model.Email)
-                @*Campo E - mail do(a) Usuario(a) que vai fazer a Reserva*@
-                <label><font face="arial" size="3" color="black">Descricao:</font></label>
-                @Html.TextAreaFor(model => model.Descricao)
-                @*Campo Descricao da Reserva*@
-                <br /><br />
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            @*@Html.ActionLink("Localização", "Localizacao", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            @*            @Html.ActionLink("Joias e Semi joias", "Consulta", "Lanche", new { area = "" }, new { @class = "navbar-brand" })*@
+            @*@Html.ActionLink("Delivery", "Delivery", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Reservas", "Cadastro", "Reserva", new { area = "" }, new { @class = "navbar-brand" })*@
+            @*@Html.ActionLink("Contato", "Cadastro", "FaleConosco", new { area = "" }, new { @class = "navbar-brand" })*@
+            <a href="#" class="navbar-brand">Voltar</a>
+</div></div>
+            @*Links do Layout*@
+        </div><br />
+        @*Pula 2 linhas Para o Titulo da Pagina nao ficar muito em cima*@
+        <strong><font face="arial" size="3">Cadastro de Sócio(a):</font></strong>
+        @*Titulo da Pagina*@
+        <br />
+        <br />
+        @*Pula 2 linhas*@
 
-                <input type="submit" class="btn btn-primary btn-sm" value="Efetuar Reserva" />
-                @*Botao de Efetuar a Reserva*@
-                <hr />
+        @*Layout da Pagina*@
+        @model Projeto.Apresentacao.Models.ReservaCadastroViewModel
+        @*Model da Pagina*@
+        @using (Html.BeginForm())
+        {
+            @*Formulario no MVC*@
+            <table>
+                <tr>
+                    <td>
+                        <font face="arial" size="3" color="black">Nome:</font>
+                    </td>
+                    <td align="left">
+                        <div style="margin-left:1em">
+                            @Html.TextBoxFor(Model => Model.Nome, new { @Class = "form-control" })
+                        </div>
+                    </td>
+                </tr>
+                <tr style="margin-top:7em">
+                    <td>
+                        <div style="margin-top:1em">
+                            <font face="arial" size="3" color="black">Telefone:</font>
+                        </div>
+                    </td>
+                    <td align="left">
+                        <div style="margin-left:1em">
+                            <div style="margin-top:1em">
+                                @Html.TextBoxFor(model => model.Telefone, new { @Class = "form-control" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="margin-top:7em">
+                    <td>
+                        <div style="margin-top:1em">
+                            <font face="arial" size="3" color="black">Celular:</font>
+                        </div>
+                    </td>
+                    <td align="left">
+                        <div style="margin-left:1em">
+                            <div style="margin-top:1em">
+                                @Html.TextBoxFor(model => model.Descricao, new { @Class = "form-control" })
+                                @*Campo E - mail do(a) Usuario(a) que vai fazer a Reserva*@
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="margin-top:7em">
+                    <td>
+                        <div style="margin-top:1em">
+                            <font face="arial" size="3" color="black">E - mail:</font>
+                        </div>
+                    </td>
+                    <td align="left">
+                        <div style="margin-left:1em">
+                            <div style="margin-top:1em">
+                                @Html.TextBoxFor(model => model.Email, new { @Class = "form-control" })
+                                @*Campo E - mail do(a) Usuario(a) que vai fazer a Reserva*@
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="margin-top:7em">
+                    <td>
+                        <div style="margin-top:1em">
+                            <font face="arial" size="3" color="black">Cpf:</font>
+                        </div>
+                    </td>
+                    <td align="left">
+                        <div style="margin-left:1em">
+                            <div style="margin-top:1em">
+                                @Html.TextBoxFor(model => model.Cpf, new { @Class = "form-control" })
+                                @*Campo E - mail do(a) Usuario(a) que vai fazer a Reserva*@
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="margin-top:7em">
+                    <td>
+                        <div style="margin-top:1em">
+                            <font face="arial" size="3" color="black">Endereço:</font>
+                        </div>
+                    </td>
+                    <td align="left">
+                        <div style="margin-left:1em">
+                            <div style="margin-top:1em">
+                                @Html.TextBoxFor(model => model.Endereco, new { @Class = "form-control" })
+                                @*Campo E - mail do(a) Usuario(a) que vai fazer a Reserva*@
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <div style="margin-top:1em">
+                            <input type="submit" class="btn btn-primary btn-sm" value="Cadastrar Sócio(a)" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            @*Botao de Efetuar a Reserva*@
+            <hr />
 
-                <strong><font face="arial" size="3" color="black">@ViewBag.Message</font></strong>
-                @*Mensagem da Pagina*@
-            </div>
-        </div>
-    }
-</body>
-</html>
+            <strong><font face="arial" size="3" color="black">@ViewBag.Message</font></strong>
+            @*Mensagem da Pagina*@
+
+        }
+        

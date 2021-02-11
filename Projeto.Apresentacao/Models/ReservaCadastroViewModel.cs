@@ -36,6 +36,18 @@ namespace Projeto.Apresentacao.Models
             get;
             set;
         }
-
+        public string Cpf
+        /// Atributo Telefone do(a) Usuario(a) que agendou a 
+        /// Reserva
+        {
+            get;
+            set;
+        }
+        public string Endereco
+        /// Atributo Descricao da Reserva
+        {
+            get;
+            set;
+        }
     }
 }

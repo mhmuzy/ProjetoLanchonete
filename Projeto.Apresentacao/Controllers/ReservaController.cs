@@ -28,11 +28,12 @@ namespace Projeto.Apresentacao.Controllers
                     r.Telefone = model.Telefone;
                     r.Email = model.Email;
                     r.Descricao = model.Descricao;
-
+                    r.Cpf = model.Cpf;
+                    r.Endereco = model.Endereco;
                     ReservaRepositorio rep = new ReservaRepositorio();
                     rep.Insert(r);
 
-                    ViewBag.Message = "Aguarde, iremos fazer a sua reserva!";
+                    ViewBag.Message = "Sócio(a) cadastrado(a) com sucesso!";
                     ModelState.Clear();
                 }
                 catch (Exception e)

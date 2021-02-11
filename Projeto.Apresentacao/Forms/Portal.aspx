@@ -19,13 +19,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../Home/Index" class="navbar-brand">Home</a>
-                <a href="../Home/Localizacao" class="navbar-brand">Localizacao</a>
-                <a href="../Lanche/Consulta" class="navbar-brand">Lanches</a>
-                <a href="../Home/Delivery" class="navbar-brand">Delivery</a>
-                <a href="../Reserva/Cadastro" class="navbar-brand">Reservas</a>
-                <a href="../Home/Contato" class="navbar-brand">Contato</a>
-            </div>
+                <a href="../Home/Index" class="navbar-brand">Página Inicial</a>
+                <a href="../Lanche/Consulta" class="navbar-brand">Joias e Semi Joias</a>
+               </div>
             <br />
             
             <table border align="right" bgcolor="black">
@@ -77,6 +73,7 @@
 </table>
                 <% /// Finalizacao da tabela do Portal %>
         <br />
+             <a href="../Usuario/Cadastro"><font color="black" size="3">Se você não possui cadastro, clica neste link!</font></a>
         </div>
     </form>
         <center>
