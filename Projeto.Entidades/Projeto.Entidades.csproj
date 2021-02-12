@@ -45,6 +45,7 @@
     <Compile Include="FaleConosco.cs" />
     <Compile Include="Lanche.cs" />
     <Compile Include="Reserva.cs" />
+    <Compile Include="Socio.cs" />
     <Compile Include="TipoUsuario.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
