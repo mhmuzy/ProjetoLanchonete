@@ -1,8 +1,118 @@
-﻿@{
-    ViewBag.Title = "Reservas";
-    Layout = Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
-                                                    : "~/Views/Layout/Layout4.cshtml";
-}
-@*Layout da Pagina*@
-<h2>Agenda aqui a sua Reserva!</h2>
-@*Aviso da Pagina*@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete</title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/bootstrapMhmuzy.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+
+    <div class="container body-content">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <br />
+                    <div>
+                        <font color="white">With Love Joias e Semi joias</font>
+                        -----------------------<a href="~/Forms/Portal.aspx"><font color="white">Sair</font></a>
+                    </div>
+
+                </div>
+                <br />
+                <table border align="right" bgcolor="black">
+                    <tr bgcolor="white">
+                        <td><font face="arial" size="3">@DateTime.Now.DayOfWeek - @DateTime.Now.Day / @DateTime.Now.Month / @DateTime.Now.Year @DateTime.Now.Hour : @DateTime.Now.Minute Hrs</font></td>
+                    </tr>
+                </table>
+
+
+
+                <div class="container">
+                    <!--Menu da Pagina Inicial-->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+
+
+                        </button>
+                        <nav class="menu" style="margin-right:305em">
+                            <ul>
+                                <li>
+                                    <font face="arial" size="2">Sócio(a)</font>
+                                    <ul>
+                                        <a href="../Reserva/Cadastro"><li><font face="arial" size="2">Cadastrar Sócio(a)</font></li></a>
+                                        <a href="~/Forms/res_reserva.aspx"><li><font face="arial" size="2">Alterar dados do(a) Sócio(a)</font></li></a>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <hr />
+    <br />
+    <strong>Seja Bem Vindo(a) ao Site da With Love!</strong>
+    <br />
+    <br />
+    Sócio
+    <br />
+    <br />
+    <!--    <table class="table table-bordered table-hover" bgcolor="black">
+                <thead>
+                    <tr bgcolor="gray" align="center">
+                        <td>Usuario(a)</td>
+                        <td>
+                            Lanche(s)
+                        </td>
+                        <td>Delivery</td>
+                        <td>
+                            Fale Conosco
+                        </td>
+                        <td>
+                            Reserva
+                        </td>
+                    </tr>
+                    <tr bgcolor="White" align="center">
+                        <td>
+                            <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Cadastrar Usuario(a)</a><br /><br />
+                            <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Alterar Senha do(a) Usuario(a)</a><br /><br />
+                            <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Excluir o(a) Usuario(a)</a><br /><br />
+                            <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Consultar o(a) Usuario(a)</a><br /><br />
+                        </td>
+                        <td>
+                            <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Cadastrar Lanche(s)</a><br /><br />
+                            <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Alterar Dado(s) do(s) Lanche(s)</a><br /><br />
+                            <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Excluir o(s) Lanche(s)</a><br /><br />
+                            <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Consultar o(s) Lanche(s)</a><br /><br />
+                        </td>
+                        <td>
+                            <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Excluir ou Consultar o Delivery</a><br /><br />
+                        </td>
+                        <td>
+                            <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Excluir ou Consultar o Fale Conosco</a><br /><br />
+                        </td>
+                        <td>
+                            <a href="" class="btn btn-success" data-toggle="collapse" data-target=".navbar-collapse"/>Excluir ou Consultar a Reserva</a><br /><br />
+                        </td>
+                    </tr>
+
+    </table>-->
+    <center><img src="../Imagens/129650115_315009846239952_7192400901753567180_n.jpg" width="850px" height="280px" /></center>
+</body>
+</html>

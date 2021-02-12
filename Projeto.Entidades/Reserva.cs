@@ -38,6 +38,13 @@ namespace Projeto.Entidades
             get;
             set;
         }
+        public string Celular
+        /// Declaracao do Atributo Telefone do(a)
+        /// Usuario(a) que agendou a Reserva
+        {
+            get;
+            set;
+        }
         public string Descricao
         /// Declaracao do Atributo Descricao da Reserva
         {

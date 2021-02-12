@@ -10,6 +10,6 @@
 namespace Projeto.Apresentacao.Forms {
     
     
-    public partial class res_reserva {
+    public partial class res_con_socio_exc {
     }
 }

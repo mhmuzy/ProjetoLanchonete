@@ -120,11 +120,13 @@
     <Content Include="Forms\ListUsuarioTrocarSenha.aspx" />
     <Content Include="Forms\Portal.aspx" />
     <Content Include="Forms\res_contato.aspx" />
+    <Content Include="Forms\res_con_socio_exc.aspx" />
     <Content Include="Forms\res_fale.aspx" />
     <Content Include="Forms\res_reserva.aspx" />
     <Content Include="Forms\trocarSenha.aspx" />
     <Content Include="Forms\update.aspx" />
     <Content Include="Forms\UpdateLanche.aspx" />
+    <Content Include="Forms\UpdateSocio.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Imagens\129650115_315009846239952_7192400901753567180_n.jpg" />
     <Content Include="Imagens\montar-uma-lanchonete-é-um-bom-negócio.jpg" />
@@ -231,6 +233,13 @@
     <Compile Include="Forms\res_contato.aspx.designer.cs">
       <DependentUpon>res_contato.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\res_con_socio_exc.aspx.cs">
+      <DependentUpon>res_con_socio_exc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\res_con_socio_exc.aspx.designer.cs">
+      <DependentUpon>res_con_socio_exc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\res_fale.aspx.cs">
       <DependentUpon>res_fale.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -265,6 +274,13 @@
     </Compile>
     <Compile Include="Forms\UpdateLanche.aspx.designer.cs">
       <DependentUpon>UpdateLanche.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UpdateSocio.aspx.cs">
+      <DependentUpon>UpdateSocio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateSocio.aspx.designer.cs">
+      <DependentUpon>UpdateSocio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

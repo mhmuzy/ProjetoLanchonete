@@ -20,13 +20,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../Home/Index" class="navbar-brand">Home</a> 
-                <a href="../Home/Localizacao" class="navbar-brand">Localizacao</a> 
-                <a href="../Lanche/Consulta" class="navbar-brand">Lanche</a>
-                <a href="../Home/Delivery" class="navbar-brand">Delivery</a>
-                <a href="../Home/Reservas" class="navbar-brand">Reservas</a>
-                <a href="../Home/Contato" class="navbar-brand">Contato</a>
-                <a href="Portal.aspx" class="navbar-brand">Area Restrita</a>
+                <a href="../Home/Reservas" class="navbar-brand">Voltar</a> 
+                
             </div>
             
             <br />
@@ -43,46 +38,27 @@
         </div>
     </div>
     <div class="container body-content">
-                <hr />
+        <h4>Consulta(s) do(a)(s) Sócio(a)(s) para efetuar a exclusão.</h4>        
+        <hr />
+        <form action="res_con_socio_exc.aspx" runat="server">
+            <table>
+                <tr>
+                    <td>
+                Digite o Nome do(a) Sócio(a):</td><td><div style="margin-left:1.05em"><input type="text" name="Nome" class="form-control" /></div></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                   <div style="margin-top:1em;margin-bottom:2em"><center><input type="submit" value="Efetuar Busca" class="btn btn-primary sm" /></center></div> 
+                </td>
+                        </tr>
+                    </table>
+                <center><img src="../Imagens/129650115_315009846239952_7192400901753567180_n.jpg" width="850px" height="280px" /></center>
+            
+        </form>
                     <% /// Divisoria da Pagina %>
-        <center><img src="../Imagens/sim-retrô-2.jpg" width="850px" height="280px" /></center>
                         <% /// Imagem da Pagina %>
         <br /><br />
                 <% /// Pula 2 linhas %>
-    <form id="form1" runat="server">
-        <div>
-
-            <%@Import Namespace="System.Data"  %>
-                <%@Import Namespace="System.Data.SqlClient"  %>
-                <%@Import Namespace="System.Configuration"  %>    
-                <%@Import Namespace="Projeto.Entidades"  %>    
-                        <% /// Assembly para as Entidades e Para a Conexao com a Base %>
-            <%        
-                SqlConnection  con = new SqlConnection(ConfigurationManager.ConnectionStrings["COTI"].ConnectionString);
-                con.Open();
-                /// Abre a Conexao com a Base
-                string Nome = Request.Form["Nome"];
-                /// Campo Nome do(a) Usuario(a) que vai fazer a Reserva
-                string E_mail = Request.Form["E_mail"];
-                /// Campo E - mail do(a) Usuario(a) que vai fazer a Reserva
-                string Telefone = Request.Form["Telefone"];
-                /// Campo Teleofne do(a) Usuario(a) que vai fazer a Reserva
-                string Descricao = Request.Form["Descricao"];
-                /// Campó Descricao do(a) Usuario(a) que vai fazer a Reserva
-                SqlCommand com = new SqlCommand("INSERT INTO RESERVA (NOME, E_MAIL, TELEFONE, DESCRICAO) VALUES('" + Nome + "', '" + E_mail + "', '" + Telefone + "', '" + Descricao + "')", con);
-                        /// Conversa com a base
-                SqlDataReader dr = com.ExecuteReader();
-                                /// Leitura dos dados
-         %>
-                                                <center>Prezado Cliente,  aguarde que entraremos em Contato!</center>
-                                                            <% /// Aviso do Resultado da Atuacao %>
-                                           <%
-                                           con.Close();
-                                               /// Fecha a Conexao com a Base
-     %>
-
-        </div>
-    </form>
         <br />
         <center>
             <footer>

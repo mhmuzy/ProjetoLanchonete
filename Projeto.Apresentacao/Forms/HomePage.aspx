@@ -87,7 +87,7 @@
                     <li><font face="arial" size="2">Sócio(a)</font> 
                         <ul>
                             <a href="../Reserva/Cadastro"><li><font face="arial" size="2">Cadastrar Sócio(a)</font></li></a>
-                            <%--<li><a href="listusuariotrocarsenha.aspx">alterar a senha do(a) usuario(a)</a></li>--%>
+                            <li><a href="res_reserva.aspx">Alterar dados do(a) Sócio(a)</a></li>
                         </ul>
                     </li>
                 </ul>
