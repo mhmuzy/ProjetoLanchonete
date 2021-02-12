@@ -58,7 +58,7 @@
                     /// Abre a Conexao com a Base
                 Reserva L = new Reserva();
                     /// Instancia do Objeto Lanche
-                string CodigoLanche = Request.QueryString["Matricula"];
+                string CodigoLanche = Convert.ToString(Request.QueryString["Matricula"]);
                     /// Atributo Codigo do Lanche
                 /// string senha = Convert.ToString(Request.QueryString["SENHA"]);
                 
@@ -66,7 +66,7 @@
                 com.ExecuteNonQuery();
                     /// Conversa com a Base
                 %>                    <br />
-                                    <center><a href="../Usuario/Administrator">Voltar</a></center>
+                                    <center><a href="../Home/Reservas">Voltar</a></center>
                                         <br />
                                                 <center>Sócio Excluído com Sucesso!</center>
                                                         <% /// Resultado da Pagina %>

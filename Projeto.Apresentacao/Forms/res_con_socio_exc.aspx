@@ -63,8 +63,8 @@
         <thead align="center">
             <tr bgcolor="gray" align="center">
                         <% /// Titulo da Pagina %>
-                <th><font face="arial" size="3" color="black">Matrícula</font></th>
                         <% /// Titulo Nome do Lanche %>
+                                <th><font face="arial" size="3" color="black">Matrícula</font></th>
                 <th><font face="arial" size="3" color="black">Nome</font></th>
                         <% /// Titulo Preco do Lasnche %>
                 <th><font face="arial" size="3" color="black">Telefone</font></th>
@@ -76,21 +76,23 @@
                         <% /// Titulo Operacao de Alterar os dados do Lanche %>
             </tr>
         </thead><%
-                        while (dr.Read())
-                        /// Leitura dos dados
-                        {
-                            Reserva l = new Reserva();
-                            /// Instancia do Objeto Lanche
-                            l.Codigo = Convert.ToInt32(dr["Matricula"]);
-                            /// Atributo Nome do Lanche
-                            l.Nome = Convert.ToString(dr["Nome"]);
-                            /// Atributo Preco do Lanche
-                            l.Telefone = Convert.ToString(dr["Telefone"]);
-                            /// Atributo Codigo do Lanche
-                            l.Celular = Convert.ToString(dr["Celular"]);
-                            l.Cpf = Convert.ToString(dr["Cpf"]);
-                            l.Email = Convert.ToString(dr["Email"]);
-                            l.Endereco = Convert.ToString(dr["Endereco"]);
+                    while (dr.Read())
+                    /// Leitura dos dados
+                    {
+                        Reserva l = new Reserva();
+                        /// Instancia do Objeto Lanche
+                        l.Codigo = Convert.ToInt32(dr["Matricula"]);
+                        /// Atributo Nome do Lanche
+                        l.Nome = Convert.ToString(dr["Nome"]);
+                        /// Atributo Preco do Lanche
+                        l.Telefone = Convert.ToString(dr["Telefone"]);
+                        /// Atributo Codigo do Lanche
+                        l.Celular = Convert.ToString(dr["Celular"]);
+                        l.Cpf = Convert.ToString(dr["Cpf"]);
+                        l.Email = Convert.ToString(dr["Email"]);
+                        l.Endereco = Convert.ToString(dr["Endereco"]);
+
+                        
                    %>
             
         <tbody>
@@ -105,7 +107,7 @@
                    <td><font face="arial" size="3" color="black"><%: l.Email %></font></td>
                    <td><font face="arial" size="3" color="black"><%: l.Endereco %></font></td>
                     <% /// Informacao Preco do Lanche %>
-                 <td><a href="UpdateSocio.aspx" class="btn btn-danger btn-sm"><font face="arial" size="3" color="black">x</font></a></td>
+                 <td><a href="UpdateSocio.aspx?Matricula=<%: l.Codigo %>" class="btn btn-danger btn-sm"><font face="arial" size="3" color="black">x</font></a></td>
                         <% /// Botao de Editar os dados do Lanche %>     
                </tr>
                    </tbody>
